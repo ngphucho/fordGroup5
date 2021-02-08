@@ -1,0 +1,91 @@
+// variable color
+$color-gray-1: #333; //default
+$color-gray-2: #626466; //The latest technology, news and vehicles;
+$color-gray-3: #a7a7a7; //nav-footer>content;
+$color-gray-4: #555; //footer>© 2021 Ford Motor Company;
+$color-blue-4: #102b4e;
+$color-blue-2: #2861a4;
+$color-blue-1: #0276b3;
+$color-blue-3: #337ab7; //*
+$color-blue-8: #014467; //DISCLOSURES;
+$color-blue-5: #37a9e8; //contact>getupdate;
+$color-red: rgb(217, 46, 20); // Airbag Recalls;
+$color-facebook: #3c5b99; //
+$color-twitter: #1da2f3; //
+$color-youtube: #ff0100; //
+$color-insta: #dc2c75; //
+
+$color-white: #fff; //default
+$color-bg-1: rgb(2, 118, 179);
+$color-bg-2: #092a46; //
+$color-bg-3: #242424; //nav-footer;
+$color-bg-4: #f7f7f7; //DISCLOSURES-content;
+
+// letter spacing
+$letter-spacing-1: 0.4px;
+$letter-spacing-2: 0.5px;
+
+// variable font-size
+$fs-1: 12px; // DISCLOSURES-content;
+$fs-2: 13px;
+$fs-3: 14px; //defaul
+$fs-4: 16px; // button
+$fs-5: 18px; //contact>getupdate;
+$fs-6: 21px; //The 2021 F-150 Tremor
+$fs-7: 24px; //Search;
+$fs-8: 30px; //title(480px)
+$fs-9: 42px; // title(992px);
+$fs-10: 60px;
+$fs-11: 96px;
+$fs-12: 1.2rem; //contact>followford;
+$fs-13: 1.3rem; //change-language; footer>© 2021 Ford Motor Company;
+$fs-14: 1.6rem;
+$fs-15: 2.75rem;
+$fs-16: 3.6rem; // title(768px)
+$fs-17: 1.4rem; //DISCLOSURES; Search>popular; nav-footer>content;
+
+//variable font-weight
+$fw-1: 500;
+$fw-2: bold;
+$fw-3: 900;
+
+//variable line-height
+$line-height-1: 1.1;
+$line-height-2: 1.25;
+$line-height-3: 1.42857143;
+$line-height-4: 1.5;
+$line-height-5: 1rem;
+$line-height-6: 2.1rem; //nav-footer>content;
+$line-height-7: 18px; //change-language;
+
+//variable margin
+$margin-1: 10px; //DISCLOSURES-content;
+$margin-2: 15px;
+$margin-3: 1rem;
+$margin-4: 4rem;
+
+//variable border-radius
+
+//variable padding
+$pd-1: 3%;
+$pd-2: 5%;
+$pd-3: 5px;
+$pd-4: 10px;
+$pd-5: 15px;
+$pd-6: 25px; //nav-footer-title;
+$pd-7: 40px; //DISCLOSURES-content(top bottom);
+$pd-8: 45px; //DISCLOSURES-content(left right); contact;
+
+//Dimension
+$dimension-1: 35px; //contact>icon-width;
+$dimension-2: 40px; //contact>icon-height;
+$dimension-3: 73px; //footer>icon-width;
+$dimension-4: 26px; //footer>icon-height;
+
+//break points
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 480px,
+);
