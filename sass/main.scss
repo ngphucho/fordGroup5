@@ -1,0 +1,35 @@
+//Chứa đường dẫn tới các file con
+//Không chứa code style css
+
+// import file theo thứ tự
+// 1.Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+
+// 2.Vender
+// @import './Vendor/';
+
+// 3.Base
+@import './Base/reset';
+@import './Base/customize';
+// @import './Base/normalize';
+
+//Componets
+@import './Components/button';
+@import './Components/background';
+
+//Layouts
+// @import './Layouts/header';
+// @import './Layouts/footer';
+// @import './Layouts/carousel';
+// @import './Layouts/intro';
+// @import './Layouts/courses';
+// @import './Layouts/students';
+// @import './Layouts/banner';
+// @import './Layouts/_topCategories';
+// @import './Layouts/feedback';
+// @import './Layouts/companies';
+// @import './Layouts/services';
+//6.Pages
+
+//7.Theme

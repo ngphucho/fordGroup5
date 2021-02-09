@@ -1,5 +1,25 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header,
+footer,
+section,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+body {
+  // font-family: 'fordngbs-antenna-light',arial,helvetica,sans-serif;
+  line-height: 1.42857143;
+  background-color: $color-white;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include styleText($color-gray-1, $fs-14, $fw-0);
 }

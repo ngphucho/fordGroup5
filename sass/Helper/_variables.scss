@@ -45,6 +45,7 @@ $fs-16: 3.6rem; // title(768px)
 $fs-17: 1.4rem; //DISCLOSURES; Search>popular; nav-footer>content;
 
 //variable font-weight
+$fw-0: normal;
 $fw-1: 500;
 $fw-2: bold;
 $fw-3: 900;
@@ -72,9 +73,10 @@ $pd-2: 5%;
 $pd-3: 5px;
 $pd-4: 10px;
 $pd-5: 15px;
-$pd-6: 25px; //nav-footer-title;
-$pd-7: 40px; //DISCLOSURES-content(top bottom);
-$pd-8: 45px; //DISCLOSURES-content(left right); contact;
+$pd-6: 20px;
+$pd-7: 25px; //nav-footer-title;
+$pd-8: 40px; //DISCLOSURES-content(top bottom);
+$pd-9: 45px; //DISCLOSURES-content(left right); contact;
 
 //Dimension
 $dimension-1: 35px; //contact>icon-width;

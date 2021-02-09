@@ -1,0 +1,27 @@
+.ude-btnBlue {
+    @include styleButton(
+    $color-blue-1,
+    $color-blue-1,
+    $pd-5,
+    $pd-6,
+    0
+  );
+  @include styleText($color-gray-4, $fs-4, $fw-0);
+  &:hover {
+      @include styleButtonHover($color-white ,$color-blue-4, $color-blue-4);
+  }
+}
+
+.ude-btnRed {
+  @include styleButton(
+    $color-red,
+    $color-red,
+    $pd-5,
+    $pd-6,
+    0
+  );
+  @include styleText($color-white, $fs-4, $fw-0);
+  &:hover {
+      @include styleButtonHover($color-white, $color-red, $color-red);
+  }
+}
