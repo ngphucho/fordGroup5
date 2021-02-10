@@ -17,6 +17,7 @@ figure {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   line-height: 1.42857143;
   background-color: #fff;
   max-width: 1440px;
