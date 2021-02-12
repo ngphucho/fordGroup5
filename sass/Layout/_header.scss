@@ -1,0 +1,73 @@
+header{
+    // position: fixed;
+    // z-index: 1;
+}
+.header-top{
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 0 $pd-9;
+    a{
+        text-decoration: none;
+    }
+}
+.header-left{
+    display: flex;
+    align-items: center;
+    .item-text{
+        @include styleText($color-blue-4,$fs-1,$fw-1);
+        padding: 0 $pd-4;
+    }
+    img{
+        width: 50px;
+        padding-bottom: $pd-3;
+    }
+    .bronco{
+        border-right: 1px solid $color-gray-3;
+    }
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .item-text{
+        @include styleText($color-blue-2,$fs-3,$fw-1);
+        padding: 0 $pd-4;
+    }
+    img{
+        width: 25px;
+        padding-bottom: $pd-3;
+    }
+}
+.navbar{
+    display: flex;
+    padding: $pd-6 $pd-9;
+    a{
+        text-decoration: none;
+    }
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    .item-text{
+        @include styleText($color-blue-1,$fs-3,$fw-1);
+        padding: 0 $pd-3;
+    }
+    img{
+        width: 100px;
+        padding: 0 $pd-6 $pd-3 0;
+    }
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .item-text{
+        @include styleText($color-blue-1,$fs-1,$fw-1);
+        padding: 0 $pd-4;
+    }
+    img{
+        width: 25px;
+        padding-bottom: $pd-3;
+    }
+}
