@@ -32,6 +32,7 @@ body {
   border: 1px solid #0276b3;
   padding: 15px 20px !important;
   border-radius: 0;
+  text-align: center;
   -webkit-transition: .5s;
   transition: .5s;
   color: #555;
@@ -43,6 +44,7 @@ body {
   background-color: #fff;
   color: #102b4e;
   border-color: #102b4e;
+  text-decoration: none;
 }
 
 .ford-btnRed {
@@ -50,6 +52,7 @@ body {
   border: 1px solid #d92e14;
   padding: 15px 20px !important;
   border-radius: 0;
+  text-align: center;
   -webkit-transition: .5s;
   transition: .5s;
   color: #fff;
@@ -61,6 +64,7 @@ body {
   background-color: #fff;
   color: #d92e14;
   border-color: #d92e14;
+  text-decoration: none;
 }
 
 .ford-btnCircleRightArrow-small {
@@ -420,6 +424,56 @@ body {
     height: 40px;
   }
   .whatHappening .contentBox .bottomBox p .ford-btnCircleRightArrow-small::after {
+    font-size: 24px;
+  }
+}
+
+.airbagRecalls .contentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.airbagRecalls .contentBox h1 {
+  color: #d92e14;
+  font-size: 42px;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.airbagRecalls .contentBox a {
+  width: 270px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .airbagRecalls .contentBox h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .airbagRecalls .contentBox h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .airbagRecalls .contentBox h1 {
     font-size: 24px;
   }
 }

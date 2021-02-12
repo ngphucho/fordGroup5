@@ -9,6 +9,7 @@
     border: 1px solid $border-color;
     padding: $pd-y $pd-x !important;
     border-radius: $border-radius;
+    text-align: center;
     transition: .5s;
 }
 
@@ -16,6 +17,7 @@
     background-color: $bg-color;
     color: $color;
     border-color: $border-color;
+    text-decoration: none;
 }
 
 @mixin styleCircle($border-width, $border-color, $bg-color, $size) {

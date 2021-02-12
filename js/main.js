@@ -1,17 +1,9 @@
-// jQuery(function($) {
-//     $('#btnWhapHappening').on('click', function() {
-//       var $el = $(this),
-//         textNode = this.firstChild;
-//         console.log($el.find('span').);
-//     //   $el.find('span').toggleClass('glyphicon-fire glyphicon-tint');
-//     //   textNode.nodeValue = 'Gimme ' + ($el.hasClass('showFire') ? 'Fire ' : 'Water ')
-//     //   $el.toggleClass('showFire');
-//     });
-//   });
+//ham getElementById rut gon
 function getELE(id) {
   return document.getElementById(id);
 }
 
+//chuc nang ẩn/hiện ảnh trong section whatHappening
 getELE("btnWhapHappening").onclick = function () {
   var icon = getELE("btnWhapHappening").querySelector("span.icon");
   var text = getELE("btnWhapHappening").querySelector("span.text");

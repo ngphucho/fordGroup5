@@ -1,0 +1,53 @@
+.airbagRecalls {
+  .contentBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: $pd-6;
+    padding-bottom: $pd-10;
+
+    h1 {
+      @include styleText($color-red, $fs-9, $fw-1);
+      margin-top: $margin-5;
+      margin-bottom: $margin-3;
+    }
+
+    a {
+      width: $dimension-5;
+      margin-top: $pd-6;
+      margin-bottom: $margin-1;
+    }
+  }
+}
+
+//responsive
+@include responsive("large") {
+  .airbagRecalls {
+    .contentBox {
+      h1 {
+        font-size: $fs-16;
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .airbagRecalls {
+    .contentBox {
+      h1 {
+        font-size: $fs-8;
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .airbagRecalls {
+    .contentBox {
+      h1 {
+        font-size: $fs-7;
+      }
+    }
+  }
+}
