@@ -1,0 +1,118 @@
+.whatHappening {
+  [class*="col-"] {
+    padding: 0;
+  }
+  .row {
+    margin: 0;
+  }
+  .contentBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      transition: 0.5s;
+    }
+
+    .bottomBox {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: $color-bg-5;
+      padding: $pd-1;
+
+      p {
+        margin: 0;
+        @include styleText($color-white, $fs-1, $fw-0);
+        text-transform: capitalize;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .big {
+        @include styleText($color-white, $fs-6, $fw-0);
+      }
+    }
+  }
+
+  .contentBox:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+  h2 {
+    margin: $pd-7 + 5 0;
+    @include styleText($color-gray-1, $fs-15, $fw-1);
+  }
+  p {
+    margin-top: 0 - $margin-2;
+    @include styleText($color-gray-2, $fs-4, $fw-2);
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar-expand-md {
+    flex-flow: inherit;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  #btnWhapHappening {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include styleText($color-white, $fs-7, $fw-0);
+    padding: 15px 0;
+    background-color: $color-blue-1;
+    border-radius: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $fs-7;
+      height: $fs-7;
+      border-radius: 50%;
+      border: 1px solid $color-white;
+      font-size: $fs-3;
+      font-weight: $fw-2;
+      margin-left: $margin-1;
+      opacity: 0.8;
+    }
+  }
+}
+
+//RESPONSIVE
+@include responsive("medium") {
+  .whatHappening {
+    .contentBox {
+      .bottomBox {
+        padding: $pd-2;
+        p {
+          font-size: $fs-14;
+
+          .ford-btnCircleRightArrow-small {
+            width: $dimension-2;
+            height: $dimension-2;
+
+            &::after {
+              font-size: $fs-7;
+            }
+          }
+        }
+      }
+    }
+  }
+}

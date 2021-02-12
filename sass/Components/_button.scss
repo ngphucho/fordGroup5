@@ -1,27 +1,41 @@
-.ude-btnBlue {
-    @include styleButton(
-    $color-blue-1,
-    $color-blue-1,
-    $pd-5,
-    $pd-6,
-    0
-  );
+.ford-btnBlue {
+  @include styleButton($color-blue-1, $color-blue-1, $pd-5, $pd-6, 0);
   @include styleText($color-gray-4, $fs-4, $fw-0);
   &:hover {
-      @include styleButtonHover($color-white ,$color-blue-4, $color-blue-4);
+    @include styleButtonHover($color-white, $color-blue-4, $color-blue-4);
   }
 }
 
-.ude-btnRed {
-  @include styleButton(
-    $color-red,
-    $color-red,
-    $pd-5,
-    $pd-6,
-    0
-  );
+.ford-btnRed {
+  @include styleButton($color-red, $color-red, $pd-5, $pd-6, 0);
   @include styleText($color-white, $fs-4, $fw-0);
   &:hover {
-      @include styleButtonHover($color-white, $color-red, $color-red);
+    @include styleButtonHover($color-white, $color-red, $color-red);
+  }
+}
+
+.ford-btnCircleRightArrow-small {
+  @include styleCircle($border-width-1 + 1, $color-white, $color-bg-5, $dimension-4);
+  margin-right: $pd-4;
+  margin-left: $pd-4;
+  
+  &::after {
+    content: "\f105";
+    @include styleText($color-white, $fs-5, $fw-3);
+    font-family: "Font Awesome 5 Free";
+    padding-left: 2px;
+  }
+}
+
+.ford-btnCircleRightArrow-large {
+  @include styleCircle($border-width-1 + 1, $color-white, $color-bg-5, $dimension-2);
+  margin-right: $pd-4;
+  margin-left: $pd-4;
+  
+  &::after {
+    content: "\f105";
+    @include styleText($color-white, $fs-7, $fw-3);
+    font-family: "Font Awesome 5 Free";
+    padding-left: 2px;
   }
 }

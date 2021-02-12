@@ -16,20 +16,21 @@ figure {
   display: block;
 }
 
+html,
 body {
   line-height: 1.42857143;
   background-color: #fff;
   max-width: 1440px;
   margin: 0 auto;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 14px;
   font-weight: normal;
 }
 
-.ude-btnBlue {
+.ford-btnBlue {
   background: #0276b3;
   border: 1px solid #0276b3;
-  padding: 15px 20px;
+  padding: 15px 20px !important;
   border-radius: 0;
   -webkit-transition: .5s;
   transition: .5s;
@@ -38,16 +39,16 @@ body {
   font-weight: normal;
 }
 
-.ude-btnBlue:hover {
+.ford-btnBlue:hover {
   background-color: #fff;
   color: #102b4e;
   border-color: #102b4e;
 }
 
-.ude-btnRed {
+.ford-btnRed {
   background: #d92e14;
   border: 1px solid #d92e14;
-  padding: 15px 20px;
+  padding: 15px 20px !important;
   border-radius: 0;
   -webkit-transition: .5s;
   transition: .5s;
@@ -56,10 +57,84 @@ body {
   font-weight: normal;
 }
 
-.ude-btnRed:hover {
+.ford-btnRed:hover {
   background-color: #fff;
   color: #d92e14;
   border-color: #d92e14;
+}
+
+.ford-btnCircleRightArrow-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 2px solid #fff;
+  background: rgba(6, 120, 188, 0.9);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.ford-btnCircleRightArrow-small:hover {
+  background-color: #fff;
+}
+
+.ford-btnCircleRightArrow-small:hover::after {
+  color: rgba(6, 120, 188, 0.9);
+}
+
+.ford-btnCircleRightArrow-small::after {
+  content: "\f105";
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  padding-left: 2px;
+}
+
+.ford-btnCircleRightArrow-large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 2px solid #fff;
+  background: rgba(6, 120, 188, 0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.ford-btnCircleRightArrow-large:hover {
+  background-color: #fff;
+}
+
+.ford-btnCircleRightArrow-large:hover::after {
+  color: rgba(6, 120, 188, 0.9);
+}
+
+.ford-btnCircleRightArrow-large::after {
+  content: "\f105";
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  padding-left: 2px;
 }
 
 .bg-white {
@@ -189,5 +264,163 @@ body {
 .nav-right img {
   width: 25px;
   padding-bottom: 5px;
+}
+
+.whatHappening [class*="col-"] {
+  padding: 0;
+}
+
+.whatHappening .row {
+  margin: 0;
+}
+
+.whatHappening .contentBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.whatHappening .contentBox img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.whatHappening .contentBox .bottomBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(6, 120, 188, 0.9);
+  padding: 3%;
+}
+
+.whatHappening .contentBox .bottomBox p {
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.whatHappening .contentBox .bottomBox .big {
+  color: #fff;
+  font-size: 21px;
+  font-weight: normal;
+}
+
+.whatHappening .contentBox:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.whatHappening h2 {
+  margin: 30px 0;
+  color: #333;
+  font-size: 2.75rem;
+  font-weight: 500;
+}
+
+.whatHappening p {
+  margin-top: -15px;
+  color: #626466;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.whatHappening .navbar {
+  padding: 0;
+}
+
+.whatHappening .navbar-expand-md {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: inherit;
+          flex-flow: inherit;
+}
+
+.whatHappening img {
+  width: 100%;
+  display: block;
+}
+
+.whatHappening #btnWhapHappening {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  padding: 15px 0;
+  background-color: #0276b3;
+  border-radius: 0;
+}
+
+.whatHappening #btnWhapHappening:hover {
+  cursor: pointer;
+}
+
+.whatHappening #btnWhapHappening .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .whatHappening .contentBox .bottomBox {
+    padding: 5%;
+  }
+  .whatHappening .contentBox .bottomBox p {
+    font-size: 1.6rem;
+  }
+  .whatHappening .contentBox .bottomBox p .ford-btnCircleRightArrow-small {
+    width: 40px;
+    height: 40px;
+  }
+  .whatHappening .contentBox .bottomBox p .ford-btnCircleRightArrow-small::after {
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

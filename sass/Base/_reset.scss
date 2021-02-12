@@ -14,12 +14,12 @@ article,
 figure {
   display: block;
 }
-
+html,
 body {
   // font-family: 'fordngbs-antenna-light',arial,helvetica,sans-serif;
   line-height: 1.42857143;
   background-color: $color-white;
   max-width: 1440px;
   margin: 0 auto;
-  @include styleText($color-gray-1, $fs-14, $fw-0);
+  @include styleText($color-gray-1, $fs-3, $fw-0);
 }
