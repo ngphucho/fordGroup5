@@ -1,0 +1,7 @@
+.myCarousel{
+    padding-top: 116px;
+    .fa-angle-left,.fa-angle-right{
+        @include styleText($color-white,$fs-10,null);
+        
+    }
+}

@@ -153,12 +153,20 @@ body {
   background-color: #092a46;
 }
 
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .header-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #f3f3f3;
-  padding: 0 45px;
+  padding: 0 35px;
 }
 
 .header-top a {
@@ -179,6 +187,12 @@ body {
   font-size: 12px;
   font-weight: 500;
   padding: 0 10px;
+}
+
+.header-left .item-text:hover {
+  color: #2861a4;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .header-left img {
@@ -211,17 +225,17 @@ body {
 
 .header-right img {
   width: 25px;
-  padding-bottom: 5px;
 }
 
-.navbar {
+.header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 45px;
+  padding: 20px 35px;
+  background-color: white;
 }
 
-.navbar a {
+.header-nav a {
   text-decoration: none;
 }
 
@@ -238,12 +252,18 @@ body {
   color: #0276b3;
   font-size: 14px;
   font-weight: 500;
-  padding: 0 5px;
+  padding: 0 10px;
+}
+
+.nav-left .item-text:hover {
+  color: #102b4e;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .nav-left img {
-  width: 100px;
-  padding: 0 20px 5px 0;
+  width: 125px;
+  padding: 0 40px 5px 0;
 }
 
 .nav-right {
@@ -265,9 +285,67 @@ body {
   padding: 0 10px;
 }
 
+.nav-right .item-text:hover {
+  color: #102b4e;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 .nav-right img {
   width: 25px;
-  padding-bottom: 5px;
+}
+
+.menu {
+  text-align: right;
+}
+
+.menu .menu-icon {
+  text-align: center;
+  border: none;
+  background-color: white;
+}
+
+.menu .menu-icon i {
+  color: #102b4e;
+  font-size: 30px;
+}
+
+.menu .menu-icon p {
+  color: #333;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-nav .account {
+    display: none;
+  }
+  .nav-left .item-text {
+    padding: 0 5px;
+  }
+  .nav-left img {
+    padding: 0 25px 5px 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header-top {
+    display: none;
+  }
+  .nav-left .item-text {
+    display: none;
+  }
+  .nav-right {
+    display: none;
+  }
+}
+
+.myCarousel {
+  padding-top: 116px;
+}
+
+.myCarousel .fa-angle-left, .myCarousel .fa-angle-right {
+  color: #fff;
+  font-size: 60px;
 }
 
 .whatHappening [class*="col-"] {

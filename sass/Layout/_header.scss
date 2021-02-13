@@ -1,73 +1,128 @@
-header{
-    // position: fixed;
-    // z-index: 1;
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
-.header-top{
+.header-top {
     display: flex;
     background-color: #f3f3f3;
-    padding: 0 $pd-9;
-    a{
+    padding: 0 35px;
+    a {
         text-decoration: none;
     }
 }
-.header-left{
+.header-left {
     display: flex;
     align-items: center;
-    .item-text{
-        @include styleText($color-blue-4,$fs-1,$fw-1);
+    .item-text {
+        @include styleText($color-blue-4, $fs-1, $fw-1);
         padding: 0 $pd-4;
+        &:hover {
+            @include styleTextHover($color-blue-2);
+        }
     }
-    img{
+    img {
         width: 50px;
         padding-bottom: $pd-3;
     }
-    .bronco{
+    .bronco {
         border-right: 1px solid $color-gray-3;
     }
 }
 
-.header-right{
+.header-right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    .item-text{
-        @include styleText($color-blue-2,$fs-3,$fw-1);
+    .item-text {
+        @include styleText($color-blue-2, $fs-3, $fw-1);
         padding: 0 $pd-4;
     }
-    img{
+    img {
         width: 25px;
-        padding-bottom: $pd-3;
     }
 }
-.navbar{
+.header-nav {
     display: flex;
-    padding: $pd-6 $pd-9;
-    a{
+    padding: $pd-6 35px;
+    background-color: white;
+    a {
         text-decoration: none;
     }
 }
-.nav-left{
+.nav-left {
     display: flex;
     align-items: center;
-    .item-text{
-        @include styleText($color-blue-1,$fs-3,$fw-1);
-        padding: 0 $pd-3;
+    .item-text {
+        @include styleText($color-blue-1, $fs-3, $fw-1);
+        padding: 0 $pd-4;
+        &:hover {
+            @include styleTextHover($color-blue-4);
+        }
     }
-    img{
-        width: 100px;
-        padding: 0 $pd-6 $pd-3 0;
+    img {
+        width: 125px;
+        padding: 0 $pd-8 $pd-3 0;
     }
 }
-.nav-right{
+.nav-right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    .item-text{
-        @include styleText($color-blue-1,$fs-1,$fw-1);
+    .item-text {
+        @include styleText($color-blue-1, $fs-1, $fw-1);
         padding: 0 $pd-4;
+        &:hover {
+            @include styleTextHover($color-blue-4);
+        }
     }
-    img{
+    img {
         width: 25px;
-        padding-bottom: $pd-3;
+    }
+}
+.menu {
+    text-align: right;
+    .menu-icon {
+        text-align: center;
+        i {
+            @include styleText($color-blue-4, $fs-8, null);
+        }
+        p {
+            @include styleText($color-gray-1, $fs-1, null);
+        }
+        border: none;
+        background-color: white;
+    }
+}
+
+//RESPONSIVE
+@include responsive("extra-large") {
+    .header-nav {
+        .account {
+            display: none;
+        }
+    }
+    .nav-left {
+        .item-text {
+            padding: 0 $pd-3;
+        }
+        img {
+            padding: 0 $pd-7 $pd-3 0;
+        }
+    }
+}
+@include responsive("large") {
+    .header-top {
+        display: none;
+    }
+    .nav-left {
+        .item-text {
+            display: none;
+        }
+    }
+    .nav-right {
+        display: none;
     }
 }
