@@ -4,6 +4,11 @@
     font-weight: $fw;
 }
 
+@mixin styleTextHover($color){
+    color: $color;
+    transition: .5s;
+}
+
 @mixin styleButton($bg-color, $border-color, $pd-y, $pd-x, $border-radius) {
     background: $bg-color;
     border: 1px solid $border-color;
