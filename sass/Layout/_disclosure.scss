@@ -1,0 +1,65 @@
+.disclosure {
+  padding: 0;
+
+  .collapsing {
+    transition: 0.5s;
+  }
+
+  .btnDisclosure {
+    &:hover{
+      text-decoration: none;
+    }
+    p {
+      text-transform: uppercase;
+
+      &::after {
+        display: inline-block;
+        padding: $pd-4;
+        text-align: center;
+        font-family: "Font Awesome 5 Free";
+        content: "\f077";
+        font-weight: 900;
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  .btnDisclosure.collapsed p::after {
+    transform: rotate(180deg);
+  }
+
+  .disclosure__content{
+    max-height: 240px;
+    overflow: auto;
+
+    ol.myListGroup {
+      list-style-position: inside;
+      margin: 0;
+      padding: $pd-8 $pd-9;
+    }
+
+    li.myListGroupItem:first-child {
+      list-style-type: none;
+      text-align: justify;
+    }
+
+  }
+
+  .disclosure__footer{
+    padding-bottom: $pd-4;
+  }
+}
+
+
+//responsive
+@include responsive('large'){
+
+}
+
+@include responsive('medium'){
+  
+}
+
+@include responsive('small'){
+  
+}

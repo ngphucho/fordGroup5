@@ -477,4 +477,57 @@ body {
     font-size: 24px;
   }
 }
+
+.disclosure {
+  padding: 0;
+}
+
+.disclosure .collapsing {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.disclosure .btnDisclosure:hover {
+  text-decoration: none;
+}
+
+.disclosure .btnDisclosure p {
+  text-transform: uppercase;
+}
+
+.disclosure .btnDisclosure p::after {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  font-family: "Font Awesome 5 Free";
+  content: "\f077";
+  font-weight: 900;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.disclosure .btnDisclosure.collapsed p::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.disclosure .disclosure__content {
+  max-height: 240px;
+  overflow: auto;
+}
+
+.disclosure .disclosure__content ol.myListGroup {
+  list-style-position: inside;
+  margin: 0;
+  padding: 40px 45px;
+}
+
+.disclosure .disclosure__content li.myListGroupItem:first-child {
+  list-style-type: none;
+  text-align: justify;
+}
+
+.disclosure .disclosure__footer {
+  padding-bottom: 10px;
+}
 /*# sourceMappingURL=main.css.map */
