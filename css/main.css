@@ -261,7 +261,7 @@ header {
   transition: .5s;
 }
 
-.nav-left img {
+.logo img {
   width: 125px;
   padding: 0 40px 5px 0;
 }
@@ -276,6 +276,7 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  text-align: right;
 }
 
 .nav-right .item-text {
@@ -300,7 +301,7 @@ header {
 }
 
 .menu .menu-icon {
-  text-align: center;
+  text-align: right;
   border: none;
   background-color: white;
 }
@@ -328,14 +329,72 @@ header {
 }
 
 @media screen and (max-width: 992px) {
+  .logo {
+    width: 50%;
+  }
   .header-top {
     display: none;
   }
+  .header-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-left {
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
   .nav-left .item-text {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 1rem 0;
+  }
+  .nav-left .item-text::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    right: 0;
+    position: absolute;
+  }
+  .menu {
+    width: 50%;
+  }
+  .menu .menu-icon .fa-times {
+    display: none;
+  }
+  .menu .menu-icon.expanded .fa-times {
+    display: block;
+  }
+  .menu .menu-icon.expanded p {
+    display: none;
+  }
+  .menu .menu-icon.expanded .fa-bars {
     display: none;
   }
   .nav-right {
     display: none;
+    width: 100%;
+    text-align: left;
+  }
+  .nav-right .item-text {
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 1rem 0;
+  }
+  .nav-right .item-text::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    right: 0;
+    position: absolute;
   }
 }
 

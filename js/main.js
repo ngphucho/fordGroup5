@@ -17,3 +17,32 @@ getELE("btnWhapHappening").onclick = function () {
   console.log(text,icon);
   console.log(getELE("btnWhapHappening").querySelector("span.text").innerHTML,getELE("btnWhapHappening").querySelector("span.icon").innerHTML)
 };
+
+
+$(document).ready(function(){
+  $('header .menu-icon').on('click', function(){
+    var leftNavEle = $('header .nav-left');
+    var rightNavEle = $('header .nav-right');
+    if(window.innerWidth < 992){
+      if(leftNavEle.css('display') === "block" && rightNavEle.css('display') === "block"){
+        leftNavEle.hide();
+        rightNavEle.hide();
+        $(this).removeClass('expanded');
+      }
+      else{
+        leftNavEle.show();
+        rightNavEle.show();
+        $(this).addClass('expanded');
+      }
+    }
+  })
+
+  $(window).on('resize', function(){
+    if(window.innerWidth >= 992){
+      var leftNavEle = $('header .nav-left');
+      var rightNavEle = $('header .nav-right');
+      leftNavEle.show();
+      rightNavEle.show();
+    }
+  })
+})
