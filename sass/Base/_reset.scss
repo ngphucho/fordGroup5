@@ -16,10 +16,10 @@ figure {
 }
 html,
 body {
-  // font-family: 'fordngbs-antenna-light',arial,helvetica,sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.42857143;
   background-color: $color-white;
   max-width: 1440px;
   margin: 0 auto;
-  @include styleText($color-gray-1, $fs-3, $fw-0);
+  @include styleText($color-gray-1, $fs-19, $fw-0);
 }

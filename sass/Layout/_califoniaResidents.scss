@@ -1,0 +1,43 @@
+.califoniaResidents {
+    .container-fluid {
+        padding: $margin-5 0;
+    }
+
+    h1{
+        @include styleText($color-white, $fs-9, $fw-1);
+        margin-left: $margin-3;
+        margin-right: $margin-3;
+    }
+
+    p{
+        @include styleText($color-white, $fs-4, $fw-0);
+        margin-left: $margin-3;
+        margin-right: $margin-3;
+        
+        a{
+            color: $color-blue-5;
+            text-decoration: underline;
+        }
+    }
+}
+
+//responsive
+@include responsive('large'){
+    .califoniaResidents{
+        h1{
+            font-size: $fs-16;
+        }
+    }
+}
+
+@include responsive('medium'){
+    .califoniaResidents{
+        h1{
+            font-size: $fs-8;
+        }
+
+        p{
+            font-size: $fs-17;
+        }
+    }
+}

@@ -18,12 +18,13 @@ figure {
 
 html,
 body {
+  font-family: 'Roboto', sans-serif;
   line-height: 1.42857143;
   background-color: #fff;
   max-width: 1440px;
   margin: 0 auto;
   color: #333;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: normal;
 }
 
@@ -33,9 +34,10 @@ body {
   padding: 15px 20px !important;
   border-radius: 0;
   text-align: center;
-  -webkit-transition: .5s;
-  transition: .5s;
-  color: #555;
+  text-transform: capitalize;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #fff;
   font-size: 16px;
   font-weight: normal;
 }
@@ -53,8 +55,9 @@ body {
   padding: 15px 20px !important;
   border-radius: 0;
   text-align: center;
-  -webkit-transition: .5s;
-  transition: .5s;
+  text-transform: capitalize;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   color: #fff;
   font-size: 16px;
   font-weight: normal;
@@ -191,8 +194,8 @@ header {
 
 .header-left .item-text:hover {
   color: #2861a4;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header-left img {
@@ -266,8 +269,8 @@ header {
 
 .nav-left .item-text:hover {
   color: #102b4e;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .logo img {
@@ -297,8 +300,8 @@ header {
 
 .nav-right .item-text:hover {
   color: #102b4e;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .nav-right .account {
@@ -642,12 +645,21 @@ header {
   transition: 0.5s;
 }
 
+.disclosure .btnDisclosure {
+  padding: 30px 20px;
+  display: block;
+}
+
 .disclosure .btnDisclosure:hover {
   text-decoration: none;
 }
 
 .disclosure .btnDisclosure p {
   text-transform: uppercase;
+  margin: 0;
+  color: #0276b3;
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .disclosure .btnDisclosure p::after {
@@ -669,6 +681,26 @@ header {
 .disclosure .disclosure__content {
   max-height: 240px;
   overflow: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.disclosure .disclosure__content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.disclosure .disclosure__content::-webkit-scrollbar-track {
+  background: #a7a7a7;
+}
+
+.disclosure .disclosure__content::-webkit-scrollbar-thumb {
+  background: #0276b3;
+}
+
+.disclosure .disclosure__content::-webkit-scrollbar-thumb:hover {
+  background: #0276b3;
 }
 
 .disclosure .disclosure__content ol.myListGroup {
@@ -679,10 +711,81 @@ header {
 
 .disclosure .disclosure__content li.myListGroupItem:first-child {
   list-style-type: none;
+}
+
+.disclosure .disclosure__content li.myListGroupItem {
   text-align: justify;
+}
+
+.disclosure .disclosure__content li.myListGroupItem p {
+  color: #333;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
 .disclosure .disclosure__footer {
   padding-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .disclosure .disclosure__content ol.myListGroup {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .disclosure .disclosure__content ol.myListGroup {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .disclosure .disclosure__content ol.myListGroup {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.califoniaResidents .container-fluid {
+  padding: 2rem 0;
+}
+
+.califoniaResidents h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.califoniaResidents p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.califoniaResidents p a {
+  color: #37a9e8;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+  .califoniaResidents h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .califoniaResidents h1 {
+    font-size: 30px;
+  }
+  .califoniaResidents p {
+    font-size: 1.4rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
