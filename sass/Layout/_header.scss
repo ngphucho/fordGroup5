@@ -27,8 +27,12 @@ header {
         width: 50px;
         padding-bottom: $pd-3;
     }
-    .bronco {
-        border-right: 1px solid $color-gray-3;
+    .ford-use {
+        border-left: 1px solid $color-gray-3;
+    }
+    .bronco{
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -78,6 +82,10 @@ header {
         &:hover {
             @include styleTextHover($color-blue-4);
         }
+    }
+    .account{
+        display: flex;
+        align-items: center;
     }
     img {
         width: 25px;

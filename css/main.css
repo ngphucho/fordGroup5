@@ -200,8 +200,17 @@ header {
   padding-bottom: 5px;
 }
 
+.header-left .ford-use {
+  border-left: 1px solid #a7a7a7;
+}
+
 .header-left .bronco {
-  border-right: 1px solid #a7a7a7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-right {
@@ -290,6 +299,15 @@ header {
   color: #102b4e;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.nav-right .account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-right img {
