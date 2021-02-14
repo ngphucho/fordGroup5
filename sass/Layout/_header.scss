@@ -3,7 +3,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
 }
 .header-top {
     display: flex;
@@ -83,7 +83,7 @@ header {
             @include styleTextHover($color-blue-4);
         }
     }
-    .account{
+    .account-icon{
         display: flex;
         align-items: center;
     }
@@ -117,9 +117,9 @@ header {
         .item-text {
             padding: 0 $pd-3;
         }
-        img {
-            padding: 0 $pd-7 $pd-3 0;
-        }
+        // img {
+        //     padding: 0 $pd-7 $pd-3 0;
+        // }
     }
 }
 @include responsive("large") {
@@ -177,11 +177,15 @@ header {
         display: none;
         width: 100%;
         text-align: left;
+        .account{
+            display: block;
+        }
         .item-text {
             position: relative;
             width: 100%;
             display: block;
             padding: 1rem 0;
+            font-size: $fs-3;
 
             &::after {
                 content: "\f078";

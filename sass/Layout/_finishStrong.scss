@@ -1,0 +1,17 @@
+.finishStrong{
+    padding: $pd-10 110px;
+    text-align: center;
+    h1{
+        @include styleText($color-gray-1, $fs-9, $fw-1);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        @include styleText($color-gray-1, $fs-4, $fw-0);
+        letter-spacing: 1px;
+        padding: $pd-6 200px;
+    }
+    img{
+        width: 100%;
+    }
+}

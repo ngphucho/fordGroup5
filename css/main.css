@@ -161,7 +161,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 .header-top {
@@ -304,7 +304,7 @@ header {
   transition: 0.5s;
 }
 
-.nav-right .account {
+.nav-right .account-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,9 +343,6 @@ header {
   }
   .nav-left .item-text {
     padding: 0 5px;
-  }
-  .nav-left img {
-    padding: 0 25px 5px 0;
   }
 }
 
@@ -404,11 +401,15 @@ header {
     width: 100%;
     text-align: left;
   }
+  .nav-right .account {
+    display: block;
+  }
   .nav-right .item-text {
     position: relative;
     width: 100%;
     display: block;
     padding: 1rem 0;
+    font-size: 14px;
   }
   .nav-right .item-text::after {
     content: "\f078";
@@ -423,9 +424,112 @@ header {
   padding-top: 116px;
 }
 
+.myCarousel .slide-first {
+  position: relative;
+}
+
+.myCarousel .slide-first .carousel-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.myCarousel .slide-first .carousel-info h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: normal;
+  padding: 30px 40px;
+  letter-spacing: 1px;
+}
+
+.myCarousel .slide-first .carousel-info p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0 40px;
+}
+
 .myCarousel .fa-angle-left, .myCarousel .fa-angle-right {
   color: #fff;
   font-size: 60px;
+}
+
+.myCarousel .carousel-indicators li {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.somethingForEveryone {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.somethingForEveryone h1 {
+  color: #333;
+  font-size: 42px;
+  font-weight: normal;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.somethingForEveryone p {
+  color: #333;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.somethingForEveryone button {
+  background: #0276b3;
+  border: 1px solid #0276b3;
+  padding: 15px 70px !important;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+.somethingForEveryone button:hover {
+  background-color: #fff;
+  color: #0276b3;
+  border-color: #0276b3;
+  text-decoration: none;
+}
+
+.somethingForEveryone img {
+  width: 100%;
+}
+
+.finishStrong {
+  padding: 70px 110px;
+  text-align: center;
+}
+
+.finishStrong h1 {
+  color: #333;
+  font-size: 42px;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.finishStrong p {
+  color: #333;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding: 20px 200px;
+}
+
+.finishStrong img {
+  width: 100%;
 }
 
 .whatHappening [class*="col-"] {
