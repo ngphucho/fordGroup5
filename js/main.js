@@ -18,31 +18,36 @@ getELE("btnWhapHappening").onclick = function () {
   console.log(getELE("btnWhapHappening").querySelector("span.text").innerHTML,getELE("btnWhapHappening").querySelector("span.icon").innerHTML)
 };
 
-
+//Menu
 $(document).ready(function(){
-  $('header .menu-icon').on('click', function(){
-    var leftNavEle = $('header .nav-left');
-    var rightNavEle = $('header .nav-right');
-    if(window.innerWidth < 992){
-      if(leftNavEle.css('display') === "block" && rightNavEle.css('display') === "block"){
-        leftNavEle.hide();
-        rightNavEle.hide();
-        $(this).removeClass('expanded');
+  $('header').each(function(){
+    var headerEle = $('header .header-nav');
+
+    if(window.innerWidth <= 992){
+      headerEle.addClass('mobile-view');
+    }
+    else{
+      headerEle.removeClass('mobile-view');
+    }
+    
+    $('header .menu-icon').on('click', function(){
+      if(headerEle.hasClass('mobile-view')){
+        if(headerEle.hasClass('expanded')){
+          headerEle.removeClass('expanded');
+        }
+        else{
+          headerEle.addClass('expanded');
+        }
+      }
+    })
+  
+    $(window).on('resize', function(){
+      if(window.innerWidth <= 992){
+        headerEle.addClass('mobile-view');
       }
       else{
-        leftNavEle.show();
-        rightNavEle.show();
-        $(this).addClass('expanded');
+        headerEle.removeClass('mobile-view');
       }
-    }
-  })
-
-  $(window).on('resize', function(){
-    if(window.innerWidth >= 992){
-      var leftNavEle = $('header .nav-left');
-      var rightNavEle = $('header .nav-right');
-      leftNavEle.show();
-      rightNavEle.show();
-    }
+    })
   })
 })

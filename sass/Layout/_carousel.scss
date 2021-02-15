@@ -15,19 +15,45 @@
                 @include styleText($color-white, $fs-5, $fw-0);
                 padding: 0 40px;
                 display: flex;
-                .ford-btnCircleRightArrow-small {
-                    background-color: transparent;
-                    &:hover {
-                        @include styleButtonHover($color-white, transparent, null);
-                    }
+            }
+            .ford-btnCircleRightArrow-small {
+                background-color: transparent;
+                &:hover {
+                    @include styleButtonHover($color-white, transparent, null);
                 }
             }
         }
     }
-    .fa-angle-left,
-    .fa-angle-right {
-        @include styleText($color-white, $fs-10, null);
+    .slide-second {
+        position: relative;
+        button {
+            position: absolute;
+            top: 35%;
+            left: 4%;
+            @include styleButton($color-blue-1, $color-blue-1, $pd-5, 100px, null);
+            @include styleText($color-white, $fs-4, $fw-0);
+
+            &:hover {
+                @include styleButtonHover($color-white, $color-blue-1, $color-blue-1);
+            }
+        }
     }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 4%;
+        i {
+            @include styleText($color-white, $fs-9, null);
+            width: 65px;
+            height: 70px;
+            line-height: 70px;
+            border: 1px solid transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            &:hover {
+                @include styleButtonHover($color-white, $color-blue-1, $color-blue-1);
+            }
+        }
+    }
+
     .carousel-indicators {
         li {
             height: 10px;
@@ -36,5 +62,14 @@
             border-radius: 50%;
             display: inline-block;
         }
+    }
+}
+//RESPONSIVE
+@include responsive('large'){
+    .myCarousel{
+        padding-top: 96px;
+    }
+    h1{
+        font-size: 36px;
     }
 }

@@ -157,6 +157,8 @@ body {
 }
 
 header {
+  -webkit-box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+          box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
   width: 100%;
   position: fixed;
   top: 0;
@@ -216,6 +218,10 @@ header {
           align-items: center;
 }
 
+.header-left .vehicles {
+  display: none;
+}
+
 .header-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,8 +241,15 @@ header {
   padding: 0 10px;
 }
 
-.header-right img {
-  width: 25px;
+.header-right i {
+  color: #102b4e;
+  font-size: 21px;
+}
+
+.header-right:hover i {
+  color: #2861a4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header-nav {
@@ -249,6 +262,20 @@ header {
 
 .header-nav a {
   text-decoration: none;
+}
+
+.logo img {
+  width: 125px;
+  padding: 0 40px 5px 0;
+}
+
+.ford-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav-left {
@@ -273,9 +300,8 @@ header {
   transition: 0.5s;
 }
 
-.logo img {
-  width: 125px;
-  padding: 0 40px 5px 0;
+.nav-left .vehicles {
+  display: none;
 }
 
 .nav-right {
@@ -289,6 +315,7 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   text-align: right;
+  padding-right: 0;
 }
 
 .nav-right .item-text {
@@ -317,12 +344,32 @@ header {
   width: 25px;
 }
 
+.nav-right .dealership {
+  display: none;
+}
+
+.nav-right .dealership .item-dealership {
+  color: #0276b3;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.nav-right .dealership i {
+  color: #0276b3;
+  font-size: 21px;
+}
+
+.nav-right .header-nav-submenu {
+  display: none;
+}
+
 .menu {
   text-align: right;
 }
 
 .menu .menu-icon {
-  text-align: right;
+  text-align: center;
   border: none;
   background-color: white;
 }
@@ -335,6 +382,7 @@ header {
 .menu .menu-icon p {
   color: #333;
   font-size: 12px;
+  margin: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -346,14 +394,25 @@ header {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1008px) {
+  .nav-left .item-text {
+    padding: 0 5px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 991.9px) {
   .logo {
+    width: 50%;
+  }
+  .menu {
     width: 50%;
   }
   .header-top {
     display: none;
   }
   .header-nav {
+    padding: 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: justify;
@@ -363,40 +422,87 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
+  .header-nav .mobile-menu {
+    padding: 20px 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
+            box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
+    height: 70px;
+  }
+  .header-nav .mobile-menu button {
+    height: auto;
+  }
+  .header-nav .ford-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px 0 0 0;
+    background-color: #f3f3f3;
+  }
+  .header-nav.mobile-view .menu-icon .fa-times {
+    display: none;
+  }
+  .header-nav.mobile-view.expanded .nav-right,
+  .header-nav.mobile-view.expanded .nav-left {
+    display: block;
+  }
+  .header-nav.mobile-view.expanded .mobile-menu {
+    -webkit-box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+            box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+  }
+  .header-nav.mobile-view.expanded .menu-icon .fa-times {
+    display: block;
+  }
+  .header-nav.mobile-view.expanded .menu-icon p {
+    display: none;
+  }
+  .header-nav.mobile-view.expanded .menu-icon .fa-bars {
+    display: none;
+  }
   .nav-left {
     display: none;
     width: 100%;
     text-align: left;
+    padding: 0;
+  }
+  .nav-left .all-vehicles {
+    display: none;
+  }
+  .nav-left .vehicles {
+    display: block;
   }
   .nav-left .item-text {
     position: relative;
     width: 100%;
     display: block;
-    padding: 1rem 0;
+    padding: 1.5rem 35px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
   }
   .nav-left .item-text::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    right: 0;
+    right: 35px;
     position: absolute;
   }
-  .menu {
-    width: 50%;
-  }
-  .menu .menu-icon .fa-times {
-    display: none;
-  }
-  .menu .menu-icon.expanded .fa-times {
-    display: block;
-  }
-  .menu .menu-icon.expanded p {
-    display: none;
-  }
-  .menu .menu-icon.expanded .fa-bars {
-    display: none;
-  }
   .nav-right {
+    padding: 0;
     display: none;
     width: 100%;
     text-align: left;
@@ -404,19 +510,80 @@ header {
   .nav-right .account {
     display: block;
   }
+  .nav-right .dealership {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 35px;
+    font-size: 14px;
+    color: #0276b3;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+  .nav-right .dealership::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    right: 35px;
+    position: absolute;
+  }
+  .nav-right .header-nav-submenu {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-right .header-nav-submenu a {
+    text-decoration: none;
+  }
+  .nav-right .header-nav-submenu .item-submenu {
+    color: #102b4e;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 10px;
+  }
+  .nav-right .header-nav-submenu .item-submenu:hover {
+    color: #2861a4;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .nav-right .header-nav-submenu .item-submenu img {
+    width: 50%;
+  }
   .nav-right .item-text {
+    padding: 1.5rem 35px;
     position: relative;
     width: 100%;
     display: block;
-    padding: 1rem 0;
     font-size: 14px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   }
   .nav-right .item-text::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    right: 0;
+    right: 35px;
     position: absolute;
+  }
+  .nav-right .account-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-left .item-text:first-child {
+    margin-left: 7px;
   }
 }
 
@@ -452,20 +619,65 @@ header {
   display: flex;
 }
 
-.myCarousel .slide-first .carousel-info p .ford-btnCircleRightArrow-small {
+.myCarousel .slide-first .carousel-info .ford-btnCircleRightArrow-small {
   background-color: transparent;
 }
 
-.myCarousel .slide-first .carousel-info p .ford-btnCircleRightArrow-small:hover {
+.myCarousel .slide-first .carousel-info .ford-btnCircleRightArrow-small:hover {
   background-color: #fff;
   color: transparent;
   text-decoration: none;
 }
 
-.myCarousel .fa-angle-left,
-.myCarousel .fa-angle-right {
+.myCarousel .slide-second {
+  position: relative;
+}
+
+.myCarousel .slide-second button {
+  position: absolute;
+  top: 35%;
+  left: 4%;
+  background: #0276b3;
+  border: 1px solid #0276b3;
+  padding: 15px 100px !important;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   color: #fff;
-  font-size: 60px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.myCarousel .slide-second button:hover {
+  background-color: #fff;
+  color: #0276b3;
+  border-color: #0276b3;
+  text-decoration: none;
+}
+
+.myCarousel .carousel-control-prev,
+.myCarousel .carousel-control-next {
+  width: 4%;
+}
+
+.myCarousel .carousel-control-prev i,
+.myCarousel .carousel-control-next i {
+  color: #fff;
+  font-size: 42px;
+  width: 65px;
+  height: 70px;
+  line-height: 70px;
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.myCarousel .carousel-control-prev i:hover,
+.myCarousel .carousel-control-next i:hover {
+  background-color: #fff;
+  color: #0276b3;
+  border-color: #0276b3;
+  text-decoration: none;
 }
 
 .myCarousel .carousel-indicators li {
@@ -474,6 +686,15 @@ header {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
+}
+
+@media screen and (max-width: 992px) {
+  .myCarousel {
+    padding-top: 96px;
+  }
+  h1 {
+    font-size: 36px;
+  }
 }
 
 .somethingForEveryone {
@@ -499,7 +720,7 @@ header {
 .somethingForEveryone button {
   background: #0276b3;
   border: 1px solid #0276b3;
-  padding: 15px 70px !important;
+  padding: 15px 100px !important;
   text-align: center;
   text-transform: capitalize;
   -webkit-transition: 0.2s;
