@@ -1,0 +1,62 @@
+.sweetenTheDeal{
+    position: relative;
+    .sweeten-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .sweeten-small{
+        display: none;
+    }
+    .sweeten-large{
+        width: 100%;
+    }
+    h1{
+        @include styleText($color-white, $fs-9, $fw-0);
+        letter-spacing: 1px;
+        padding-top: 30px;
+    }
+    p{
+        @include styleText($color-white, $fs-4, $fw-0);
+        letter-spacing: 1px;
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        .ford-btnCircleRightArrow-small{
+            background-color: transparent;
+            &:hover{
+                @include styleButtonHover($color-white, transparent, null);
+            }
+        }
+    }
+}
+//RESPONSIVE
+@include responsive("large"){
+    .sweetenTheDeal{
+        .sweeten-large{
+            display: none;
+        }
+        .sweeten-small{
+            display: block;
+            width: 100%;
+        }
+        h1{
+            font-size: 36px;
+        }
+        p{
+            padding-top: 70%;
+        }
+    }
+}
+@include responsive("medium"){
+    .sweetenTheDeal{
+        h1{
+            font-size: $fs-8;
+        }
+        p{
+            font-size: $fs-3;
+        }
+    }
+}

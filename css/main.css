@@ -447,9 +447,23 @@ header {
   font-size: 18px;
   font-weight: normal;
   padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.myCarousel .fa-angle-left, .myCarousel .fa-angle-right {
+.myCarousel .slide-first .carousel-info p .ford-btnCircleRightArrow-small {
+  background-color: transparent;
+}
+
+.myCarousel .slide-first .carousel-info p .ford-btnCircleRightArrow-small:hover {
+  background-color: #fff;
+  color: transparent;
+  text-decoration: none;
+}
+
+.myCarousel .fa-angle-left,
+.myCarousel .fa-angle-right {
   color: #fff;
   font-size: 60px;
 }
@@ -507,9 +521,50 @@ header {
   width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  .somethingForEveryone h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .somethingForEveryone h1 {
+    font-size: 30px;
+  }
+  .somethingForEveryone p {
+    font-size: 14px;
+  }
+}
+
 .finishStrong {
   padding: 70px 110px;
   text-align: center;
+}
+
+.finishStrong .video {
+  position: relative;
+}
+
+.finishStrong .video .play-icon {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+.finishStrong .video .play-icon i {
+  width: 100px;
+  height: 100px;
+  line-height: 104px;
+  padding-left: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 30px;
+}
+
+.finishStrong .video .play-icon i:hover {
+  background-color: #0276b3;
 }
 
 .finishStrong h1 {
@@ -530,6 +585,114 @@ header {
 
 .finishStrong img {
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .finishStrong p {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .finishStrong {
+    padding: 70px;
+  }
+  .finishStrong h1 {
+    font-size: 36px;
+  }
+  .finishStrong p {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .finishStrong {
+    padding: 15px 25px;
+  }
+  .finishStrong h1 {
+    font-size: 30px;
+  }
+  .finishStrong p {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+.sweetenTheDeal {
+  position: relative;
+}
+
+.sweetenTheDeal .sweeten-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sweetenTheDeal .sweeten-small {
+  display: none;
+}
+
+.sweetenTheDeal .sweeten-large {
+  width: 100%;
+}
+
+.sweetenTheDeal h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding-top: 30px;
+}
+
+.sweetenTheDeal p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sweetenTheDeal p .ford-btnCircleRightArrow-small {
+  background-color: transparent;
+}
+
+.sweetenTheDeal p .ford-btnCircleRightArrow-small:hover {
+  background-color: #fff;
+  color: transparent;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+  .sweetenTheDeal .sweeten-large {
+    display: none;
+  }
+  .sweetenTheDeal .sweeten-small {
+    display: block;
+    width: 100%;
+  }
+  .sweetenTheDeal h1 {
+    font-size: 36px;
+  }
+  .sweetenTheDeal p {
+    padding-top: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sweetenTheDeal h1 {
+    font-size: 30px;
+  }
+  .sweetenTheDeal p {
+    font-size: 14px;
+  }
 }
 
 .whatHappening [class*="col-"] {

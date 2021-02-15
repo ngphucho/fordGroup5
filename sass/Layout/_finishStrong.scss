@@ -1,17 +1,69 @@
-.finishStrong{
+.finishStrong {
     padding: $pd-10 110px;
     text-align: center;
-    h1{
+    .video {
+        position: relative;
+        .play-icon {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            i{
+                width: 100px;
+                height: 100px;
+                line-height: 104px;
+                padding-left: 5px;
+                border: none;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.6);
+                @include styleText($color-white, $fs-8,null);
+                &:hover{
+                    background-color: $color-bg-1;
+                }
+            }
+        }
+    }
+    h1 {
         @include styleText($color-gray-1, $fs-9, $fw-1);
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
-    p{
+    p {
         @include styleText($color-gray-1, $fs-4, $fw-0);
         letter-spacing: 1px;
         padding: $pd-6 200px;
     }
-    img{
+    img {
         width: 100%;
+    }
+}
+//RESPONSIVE
+@include responsive("extra-large") {
+    .finishStrong {
+        p {
+            padding: $pd-6 $pd-8;
+        }
+    }
+}
+@include responsive("large") {
+    .finishStrong {
+        padding: $pd-10;
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            padding: $pd-4;
+        }
+    }
+}
+@include responsive("medium") {
+    .finishStrong {
+        padding: $pd-5 $pd-7;
+        h1 {
+            font-size: $fs-8;
+        }
+        p {
+            font-size: $fs-3;
+            padding: $pd-4 0;
+        }
     }
 }

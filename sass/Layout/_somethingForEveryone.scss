@@ -22,3 +22,21 @@
         width: 100%;
     }
 }
+//RESPONSIVE
+@include responsive("large"){
+    .somethingForEveryone{
+        h1{
+            font-size: 36px;
+        }
+    }
+}
+@include responsive("medium"){
+    .somethingForEveryone{
+        h1{
+            font-size: $fs-8;
+        }
+        p{
+            font-size: $fs-3;
+        }
+    }
+}
