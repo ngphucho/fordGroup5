@@ -32,8 +32,13 @@
         @include styleText($color-white, $fs-1, $fw-0);
         text-transform: capitalize;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
+        span.text {
+          flex: 63%;
+        }
       }
 
       .big {
