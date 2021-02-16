@@ -1086,14 +1086,14 @@ header {
   .whatHappening .contentBox .bottomBox {
     padding: 5%;
   }
-  .whatHappening .contentBox .bottomBox p {
+  .whatHappening .contentBox .bottomBox .row {
     font-size: 1.6rem;
   }
-  .whatHappening .contentBox .bottomBox p .ford-btnCircleRightArrow-small {
+  .whatHappening .contentBox .bottomBox .row .ford-btnCircleRightArrow-small {
     width: 40px;
     height: 40px;
   }
-  .whatHappening .contentBox .bottomBox p .ford-btnCircleRightArrow-small::after {
+  .whatHappening .contentBox .bottomBox .row .ford-btnCircleRightArrow-small::after {
     font-size: 24px;
   }
 }
