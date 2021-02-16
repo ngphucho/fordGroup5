@@ -26,18 +26,26 @@
       width: 100%;
       background-color: $color-bg-5;
       padding: $pd-1;
+      @include styleText($color-white, $fs-1, $fw-0);
+      text-transform: capitalize;
 
-      p {
-        margin: 0;
-        @include styleText($color-white, $fs-1, $fw-0);
-        text-transform: capitalize;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+      [class*="col-"] {
+        justify-content: center;
 
-        span.text {
-          flex: 63%;
+        .text,
+        .icon {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+        }
+
+        .icon{
+          justify-content: flex-end;
+
+          [class*=ford-btnCircleRightArrow-]{
+            margin: 0;
+          }
         }
       }
 
