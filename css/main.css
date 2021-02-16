@@ -591,49 +591,37 @@ header {
   padding-top: 116px;
 }
 
-.myCarousel .slide-first {
+.myCarousel .firstSlide {
   position: relative;
 }
 
-.myCarousel .slide-first .carousel-info {
+.myCarousel .firstSlide .img-firstSlide-smallScreen {
+  display: none;
+}
+
+.myCarousel .firstSlide .carousel-info {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 3%;
+  bottom: 5%;
 }
 
-.myCarousel .slide-first .carousel-info h1 {
+.myCarousel .firstSlide .carousel-info span {
   color: #fff;
-  font-size: 42px;
+  font-size: 12px;
   font-weight: normal;
-  padding: 30px 40px;
   letter-spacing: 1px;
+  padding: 10px;
 }
 
-.myCarousel .slide-first .carousel-info p {
-  color: #fff;
-  font-size: 18px;
-  font-weight: normal;
-  padding: 0 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.myCarousel .slide-first .carousel-info .ford-btnCircleRightArrow-small {
-  background-color: transparent;
-}
-
-.myCarousel .slide-first .carousel-info .ford-btnCircleRightArrow-small:hover {
-  background-color: #fff;
-  color: transparent;
-  text-decoration: none;
-}
-
-.myCarousel .slide-second {
+.myCarousel .secondSlide {
   position: relative;
 }
 
-.myCarousel .slide-second button {
+.myCarousel .secondSlide .img-secondSlide-smallScreen {
+  display: none;
+}
+
+.myCarousel .secondSlide button {
   position: absolute;
   top: 35%;
   left: 4%;
@@ -649,7 +637,7 @@ header {
   font-weight: normal;
 }
 
-.myCarousel .slide-second button:hover {
+.myCarousel .secondSlide button:hover {
   background-color: #fff;
   color: #0276b3;
   border-color: #0276b3;
@@ -688,12 +676,23 @@ header {
   display: inline-block;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991.9px) {
   .myCarousel {
     padding-top: 74px;
   }
-  h1 {
-    font-size: 36px;
+  .myCarousel .firstSlide .img-firstSlide-largeScreen {
+    display: none;
+  }
+  .myCarousel .firstSlide .img-firstSlide-smallScreen {
+    display: block;
+    width: 100%;
+  }
+  .myCarousel .secondSlide .img-secondSlide-largeScreen {
+    display: none;
+  }
+  .myCarousel .secondSlide .img-secondSlide-smallScreen {
+    display: block;
+    width: 100%;
   }
 }
 

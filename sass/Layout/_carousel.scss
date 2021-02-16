@@ -1,30 +1,41 @@
 .myCarousel {
     padding-top: 116px;
-    .slide-first {
+    .firstSlide {
+        .img-firstSlide-smallScreen{
+            display: none;
+        }
         position: relative;
         .carousel-info {
             position: absolute;
-            left: 0;
-            top: 0;
-            h1 {
-                @include styleText($color-white, $fs-9, $fw-0);
-                padding: 30px 40px;
+            left: 3%;
+            bottom: 5%;
+            span{
+                @include styleText($color-white, $fs-1,$fw-0);
                 letter-spacing: 1px;
+                padding: 10px;
             }
-            p {
-                @include styleText($color-white, $fs-5, $fw-0);
-                padding: 0 40px;
-                display: flex;
-            }
-            .ford-btnCircleRightArrow-small {
-                background-color: transparent;
-                &:hover {
-                    @include styleButtonHover($color-white, transparent, null);
-                }
-            }
+            // h1 {
+            //     @include styleText($color-white, $fs-9, $fw-0);
+            //     padding: 30px 40px;
+            //     letter-spacing: 1px;
+            // }
+            // p {
+            //     @include styleText($color-white, $fs-5, $fw-0);
+            //     padding: 0 40px;
+            //     display: flex;
+            // }
+            // .ford-btnCircleRightArrow-small {
+            //     background-color: transparent;
+            //     &:hover {
+            //         @include styleButtonHover($color-white, transparent, null);
+            //     }
+            // }
         }
     }
-    .slide-second {
+    .secondSlide {
+        .img-secondSlide-smallScreen{
+            display: none;
+        }
         position: relative;
         button {
             position: absolute;
@@ -65,11 +76,29 @@
     }
 }
 //RESPONSIVE
-@include responsive('large'){
+@media screen and (max-width: 991.9px) {
     .myCarousel{
         padding-top: 74px;
+        .firstSlide{
+            .img-firstSlide-largeScreen{
+                display: none;
+            }
+            .img-firstSlide-smallScreen{
+                display: block;
+                width: 100%;
+            }
+        }
+        .secondSlide{
+            .img-secondSlide-largeScreen{
+                display: none;
+            }
+            .img-secondSlide-smallScreen{
+                display: block;
+                width: 100%;
+            }
+        }
     }
-    h1{
-        font-size: 36px;
-    }
+    // h1{
+    //     font-size: 36px;
+    // }
 }
