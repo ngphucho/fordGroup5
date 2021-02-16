@@ -57,7 +57,8 @@ header {
 }
 .header-nav {
     display: flex;
-    padding: $pd-6 35px;
+    // padding: $pd-6 35px;
+    padding: 0 35px;//exchange
     background-color: white;
     a {
         text-decoration: none;
@@ -149,6 +150,72 @@ header {
         }
     }
 }
+
+//start
+@media screen and (min-width:992px){
+        .nav-left{
+            .submenu-content{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+            }
+
+            [class*=col]:not(.submenu-content){
+                position: static;
+            }
+
+            position: static;
+        }
+
+        .nav-right{
+            .submenu-content{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+
+                .item-link {
+                        // display: block;
+                        // @include styleText($color-blue-1, $fs-3, $fw-1);
+                        // padding: 0 $pd-4;
+                        // text-align: left;
+                        display: block;
+            display: flex;
+            position: relative;
+            width: 100%;
+            padding: 1.5rem 35px;
+            font-size: $fs-3;
+            color: $color-blue-1;
+            border-bottom: .5px solid rgba(black, .1);
+
+                    &::after {
+                        content: "\f054";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        right: 35px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        .ford-navbar{
+            position: static;
+        }
+
+        .nav-left,
+        .nav-right,
+        .normal-menu {
+            padding-top: $pd-6;
+            padding-bottom: $pd-6;
+        }
+
+
+}
+//end
+
 @media screen and (min-width:992px) and (max-width:1008px) {
     .nav-left {
         .item-text {
@@ -156,6 +223,8 @@ header {
             font-size: $fs-2;
         }
     }
+
+
 }
 @media screen and (max-width: 991.9px) {
     .logo {
@@ -235,9 +304,9 @@ header {
         text-align: left;
         padding: 0;
 
-        .all-vehicles {
-            display: none;
-        }
+        // .all-vehicles {
+        //     display: none;
+        // }
         .vehicles {
             display: block;
         }

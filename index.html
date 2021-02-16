@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="header-nav container-fluid">
-        <div class="mobile-menu col-lg-1">
+        <div class="mobile-menu col-lg-1 normal-menu">
           <div class="logo col-lg-1 col-xl-1">
             <a href="#"><img src="./img/1000px-Ford_logo_flat.svg.png" /></a>
           </div>
@@ -61,31 +61,84 @@
             </button>
           </div>
         </div>
-        <div class="ford-navbar col-lg-11">
+        <div class="ford-navbar col-lg-11" id="collapseHeader">
           <div class="nav-left col-lg-8 col-xl-8">
-            <div class="all-vehicles">
-              <a class="item-text" href="#">SUVS & CROSSOVES</a>
-              <a class="item-text" href="#">TRUCKS & VANS</a>
-              <a class="item-text" href="#">ELECTRIFIED</a>
-              <a class="item-text" href="#">CARS</a>
-              <a class="item-text" href="#">ALL VEHICLES</a>
-            </div>
             <div class="vehicles">
-              <a class="item-text" href="#">VEHICLES</a>
+              <a class="item-text d-lg-none collapsed" data-toggle="collapse" href="#collapseMenu" role="button">VEHICLES</a>
+            </div>
+            <div class="all-vehicles collapse d-lg-block" id="collapseMenu" data-parent="#collapseHeader">
+              <!-- 1 -->
+              <!-- <div class="wrap"> -->
+                <a class="item-text collapsed" data-toggle="collapse" href="#item1-collapse" role="button">SUVS & CROSSOVES</a>
+                <div class="item-text-collapse collapse auto-hide bg-blue submenu-content" id="item1-collapse" data-parent="#collapseHeader">
+                  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, possimus?</h1>
+                </div>
+              <!-- </div> -->
+              <!-- 2 -->
+              <a class="item-text collapsed" data-toggle="collapse" href="#item2-collapse" role="button">TRUCKS & VANS</a>
+              <div class="item-text-collapse collapse auto-hide bg-blue submenu-content" id="item2-collapse" data-parent="#collapseHeader">
+                  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita pariatur ab odio?</h1>
+                </div>
+              <!-- 3 -->
+              <a class="item-text collapsed" data-toggle="collapse" href="#item3-collapse" role="button">ELECTRIFIED</a>
+              <div class="item-text-collapse collapse auto-hide bg-blue submenu-content" id="item3-collapse" data-parent="#collapseHeader">
+                  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro voluptatem accusantium non!</h1>
+                </div>
+              <!-- 4 -->
+              <a class="item-text collapsed" data-toggle="collapse" href="#item4-collapse" role="button">CARS</a>
+              <div class="item-text-collapse collapse auto-hide bg-blue submenu-content" id="item4-collapse" data-parent="#collapseHeader">
+                  <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, nihil libero. Laboriosam, eum animi!</h1>
+                </div>
+              <!-- 5 -->
+              <a class="item-text collapsed" data-toggle="collapse" href="#item5-collapse" role="button">ALL VEHICLES</a>
+              <div class="item-text-collapse collapse auto-hide bg-blue submenu-content" id="item5-collapse" data-parent="#collapseHeader">
+                  <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem ad pariatur consequuntur quam, eius tenetur.</h1>
+                </div>
             </div>
           </div>
           <div class="nav-right col-lg-4 col-xl-4">
-            <a class="item-text account-icon" href="#">
+            <!-- MY ACCOUNT -->
+            <a class="item-text account-icon collapsed" data-toggle="collapse" href="#collapseMyAccount" role="button">
               <img src="./img/account_icon.svg" />
               <span class="account">MY ACCOUNT</span>
             </a>
-            <a class="item-text" href="#">FINANCE</a>
-            <a class="item-text" href="#">SUPPORT</a>
+            <div class="collapse auto-hide submenu-content" id="collapseMyAccount" data-parent="#collapseHeader">
+              <a class="item-text collapsed item-link" href="#">Sign In</a>
+              <a class="item-text collapsed item-link" href="#">Saved Items</a>
+          </div>
+            <!-- FINANCE -->
+            <a class="item-text collapsed" data-toggle="collapse" href="#collapseFinance" role="button">FINANCE</a>
+            <div class="collapse auto-hide submenu-content" id="collapseFinance" data-parent="#collapseHeader">
+              <a class="item-text collapsed item-link" href="#">Ford Credit Home</a>
+              <a class="item-text collapsed item-link" href="#">Pay My Bill</a>
+              <a class="item-text collapsed item-link" href="#">Apply for Credit</a>
+              <a class="item-text collapsed item-link" href="#">Ford Credit Customer Support</a>
+              <a class="item-text collapsed item-link" href="#">Financing Options</a>
+          </div>
+            <!-- SUPPORT -->
+            <a class="item-text collapsed" data-toggle="collapse" href="#collapseSupport" role="button">SUPPORT</a>
+            <div class="collapse auto-hide submenu-content" id="collapseSupport" data-parent="#collapseHeader">
+              <a class="item-text collapsed item-link" href="#">Ask Ford</a>
+              <a class="item-text collapsed item-link" href="#">Owners</a>
+              <a class="item-text collapsed item-link" href="#">Vehicle Support & How-Tos</a>
+              <a class="item-text collapsed item-link" href="#">Vehicle Maintenance & Service</a>
+              <a class="item-text collapsed item-link" href="#">SYNC & Technology</a>
+              <a class="item-text collapsed item-link" href="#">Warranty</a>
+              <a class="item-text collapsed item-link" href="#">FordPass</a>
+              <a class="item-text collapsed item-link" href="#">Contact Ford</a>
+          </div>
+            <!-- Dealership Locations -->
             <div class="dealership">
               <a href="#"><i class="fa fa-map-marker-alt"></i></a>
               <a class="item-dealership" href="#"> Dealership Locations </a>
             </div>
-            <a class="item-text" href="#">EN</a>
+            <!-- EN -->
+            <a class="item-text collapsed" data-toggle="collapse" href="#collapseLanguage" role="button">EN</a>
+            <div class="collapse auto-hide submenu-content" id="collapseLanguage" data-parent="#collapseHeader">
+              <a class="item-text collapsed item-link" href="#">English</a>
+              <a class="item-text collapsed item-link" href="#">Spanish</a>
+          </div>
+            <!-- header-nav-submenu -->
             <div class="header-nav-submenu">
               <a class="item-submenu" href="#">
                 <img src="./img/eyebrow_logo.svg" />

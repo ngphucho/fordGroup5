@@ -51,3 +51,10 @@ $(document).ready(function(){
     })
   })
 })
+
+//auto close subitem when click outside
+$(document).click(function(e) {
+	if (!e.target.closest('.submenu-content')) {
+    $('.auto-hide').collapse('hide');	
+    } 
+});
