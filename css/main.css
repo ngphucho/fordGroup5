@@ -851,11 +851,11 @@ header {
   text-align: center;
 }
 
-.sweetenTheDeal .sweeten-small {
+.sweetenTheDeal .sweeten-smallScreen {
   display: none;
 }
 
-.sweetenTheDeal .sweeten-large {
+.sweetenTheDeal .sweeten-largeScreen {
   width: 100%;
 }
 
@@ -872,7 +872,7 @@ header {
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 1px;
-  padding-top: 100px;
+  padding-top: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -891,15 +891,25 @@ header {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .sweetenTheDeal h1 {
+    padding-top: 7px;
+  }
+  .sweetenTheDeal p {
+    padding-top: 7%;
+  }
+}
+
 @media screen and (max-width: 992px) {
-  .sweetenTheDeal .sweeten-large {
+  .sweetenTheDeal .sweeten-largeScreen {
     display: none;
   }
-  .sweetenTheDeal .sweeten-small {
+  .sweetenTheDeal .sweeten-smallScreen {
     display: block;
     width: 100%;
   }
   .sweetenTheDeal h1 {
+    padding-top: 20px;
     font-size: 36px;
   }
   .sweetenTheDeal p {

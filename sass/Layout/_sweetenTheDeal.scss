@@ -7,10 +7,10 @@
         width: 100%;
         text-align: center;
     }
-    .sweeten-small{
+    .sweeten-smallScreen{
         display: none;
     }
-    .sweeten-large{
+    .sweeten-largeScreen{
         width: 100%;
     }
     h1{
@@ -21,7 +21,7 @@
     p{
         @include styleText($color-white, $fs-4, $fw-0);
         letter-spacing: 1px;
-        padding-top: 100px;
+        padding-top: 7%;
         display: flex;
         justify-content: center;
         .ford-btnCircleRightArrow-small{
@@ -33,16 +33,27 @@
     }
 }
 //RESPONSIVE
+@include responsive("extra-large"){
+    .sweetenTheDeal{
+        h1{
+            padding-top: 7px;
+        }
+        p{
+            padding-top: 7%;
+        }
+    }
+}
 @include responsive("large"){
     .sweetenTheDeal{
-        .sweeten-large{
+        .sweeten-largeScreen{
             display: none;
         }
-        .sweeten-small{
+        .sweeten-smallScreen{
             display: block;
             width: 100%;
         }
         h1{
+            padding-top: 20px;
             font-size: 36px;
         }
         p{
