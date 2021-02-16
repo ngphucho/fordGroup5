@@ -748,7 +748,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .somethingForEveryone h1 {
     font-size: 30px;
   }
@@ -826,7 +826,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .finishStrong {
     padding: 15px 25px;
   }
@@ -917,7 +917,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .sweetenTheDeal h1 {
     font-size: 30px;
   }
@@ -977,12 +977,20 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.whatHappening .contentBox .bottomBox p span.text {
+  -webkit-box-flex: 63%;
+      -ms-flex: 63%;
+          flex: 63%;
 }
 
 .whatHappening .contentBox .bottomBox .big {
@@ -1068,7 +1076,7 @@ header {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .whatHappening .contentBox .bottomBox {
     padding: 5%;
   }
@@ -1122,7 +1130,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .airbagRecalls .contentBox h1 {
     font-size: 30px;
   }
@@ -1233,7 +1241,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .disclosure .disclosure__content ol.myListGroup {
     padding-left: 25px;
     padding-right: 25px;
@@ -1278,7 +1286,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .califoniaResidents h1 {
     font-size: 30px;
   }
