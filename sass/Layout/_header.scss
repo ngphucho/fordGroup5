@@ -152,6 +152,33 @@ header {
 }
 
 //start
+header{
+    .collapsing{
+        transition: all .5s;
+    }
+}
+
+.nav-right{
+    .item-link {
+        display: block;
+        display: flex;
+        position: relative;
+        width: 100%;
+        padding: 1.5rem 35px;
+        font-size: $fs-3;
+        color: $color-blue-1;
+        border-bottom: .5px solid rgba(black, .1);
+    
+        &::after {
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            right: 35px;
+            position: absolute;
+        }
+    }
+}
+
 @media screen and (min-width:992px){
         .nav-left{
             .submenu-content{
@@ -176,28 +203,7 @@ header {
                 width: 100%;
                 background-color: #ffffff;
 
-                .item-link {
-                        // display: block;
-                        // @include styleText($color-blue-1, $fs-3, $fw-1);
-                        // padding: 0 $pd-4;
-                        // text-align: left;
-                        display: block;
-            display: flex;
-            position: relative;
-            width: 100%;
-            padding: 1.5rem 35px;
-            font-size: $fs-3;
-            color: $color-blue-1;
-            border-bottom: .5px solid rgba(black, .1);
-
-                    &::after {
-                        content: "\f054";
-                        font-family: "Font Awesome 5 Free";
-                        font-weight: 900;
-                        right: 35px;
-                        position: absolute;
-                    }
-                }
+                
             }
         }
 
@@ -213,6 +219,25 @@ header {
         }
 
 
+}
+
+@include responsive('large'){
+    a[aria-expanded="true"]{
+        background-color: $color-blue-4;
+        color: $color-white !important;
+        box-shadow: 0 8px 4px -4px #00000033;
+    }
+
+    .collapse.show > .item-text{
+        background-color: #ffffff;
+    }
+
+    .all-vehicles a[aria-expanded="true"]{
+        background-color: #f1f1f1 !important;
+        font-weight: $fw-0;
+        color: $color-blue-4 !important;
+
+    }
 }
 //end
 
@@ -237,6 +262,7 @@ header {
         display: none;
     }
     .header-nav {
+        overflow: hidden;
         padding: 0;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -319,7 +345,7 @@ header {
             font-size: $fs-3;
 
             &::after {
-                content: "\f078";
+                content: "\f077";
                 font-family: "Font Awesome 5 Free";
                 font-weight: 900;
                 right: 35px;
@@ -373,7 +399,7 @@ header {
                 }
             }
         }
-        .item-text {
+        a.item-text:not(.item-link) {
             padding: 1.5rem 35px;
             position: relative;
             width: 100%;
@@ -383,17 +409,23 @@ header {
             border-bottom: .5px solid rgba(black, .1);
 
             &::after {
-                content: "\f078";
+                content: "\f077";
                 font-family: "Font Awesome 5 Free";
                 font-weight: 900;
                 right: 35px;
                 position: absolute;
             }
         }
-        .account-icon {
-            display: flex;
+
+        a.account-icon {
+            display: flex !important;
         }
     }
+    
+    a.item-text.collapsed:not(.item-link)::after {
+        transform: rotate(180deg);
+    }
+
 }
 
 @media screen and (min-width: 992px){

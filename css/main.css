@@ -394,6 +394,32 @@ header {
   }
 }
 
+header .collapsing {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav-right .item-link {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 35px;
+  font-size: 14px;
+  color: #0276b3;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-right .item-link::after {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  right: 35px;
+  position: absolute;
+}
+
 @media screen and (min-width: 992px) {
   .nav-left {
     position: static;
@@ -414,25 +440,6 @@ header {
     width: 100%;
     background-color: #ffffff;
   }
-  .nav-right .submenu-content .item-link {
-    display: block;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    width: 100%;
-    padding: 1.5rem 35px;
-    font-size: 14px;
-    color: #0276b3;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-  }
-  .nav-right .submenu-content .item-link::after {
-    content: "\f054";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    right: 35px;
-    position: absolute;
-  }
   .ford-navbar {
     position: static;
   }
@@ -441,6 +448,23 @@ header {
   .normal-menu {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  a[aria-expanded="true"] {
+    background-color: #102b4e;
+    color: #fff !important;
+    -webkit-box-shadow: 0 8px 4px -4px #00000033;
+            box-shadow: 0 8px 4px -4px #00000033;
+  }
+  .collapse.show > .item-text {
+    background-color: #ffffff;
+  }
+  .all-vehicles a[aria-expanded="true"] {
+    background-color: #f1f1f1 !important;
+    font-weight: normal;
+    color: #102b4e !important;
   }
 }
 
@@ -462,6 +486,7 @@ header {
     display: none;
   }
   .header-nav {
+    overflow: hidden;
     padding: 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -542,7 +567,7 @@ header {
     font-size: 14px;
   }
   .nav-left .item-text::after {
-    content: "\f078";
+    content: "\f077";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     right: 35px;
@@ -606,7 +631,7 @@ header {
   .nav-right .header-nav-submenu .item-submenu img {
     width: 50%;
   }
-  .nav-right .item-text {
+  .nav-right a.item-text:not(.item-link) {
     padding: 1.5rem 35px;
     position: relative;
     width: 100%;
@@ -614,17 +639,21 @@ header {
     font-size: 14px;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   }
-  .nav-right .item-text::after {
-    content: "\f078";
+  .nav-right a.item-text:not(.item-link)::after {
+    content: "\f077";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     right: 35px;
     position: absolute;
   }
-  .nav-right .account-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .nav-right a.account-icon {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  a.item-text.collapsed:not(.item-link)::after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
