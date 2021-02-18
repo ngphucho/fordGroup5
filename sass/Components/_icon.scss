@@ -1,0 +1,7 @@
+.icon-hybrid {
+    @include createIcon('/img/icon_hybrid.svg', $dimension-6, $dimension-6);
+}
+
+.icon-all-electric {
+    @include createIcon('/img/icon_all_electric.svg', $dimension-6, $dimension-6);
+}

@@ -44,6 +44,15 @@
   }
 }
 
+@mixin createIcon($url, $width, $height) {
+  background-image: url($url);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: $width;
+  height: $height;
+}
+
 //responsive
 @mixin responsive($screen) {
   @if (map-has-key($map: $breakpoints, $key: $screen)) {

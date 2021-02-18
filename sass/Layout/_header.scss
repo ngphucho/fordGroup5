@@ -1,439 +1,505 @@
 header {
-    box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .header-top {
-    display: flex;
-    background-color: #f3f3f3;
-    padding: 0 35px;
-    a {
-        text-decoration: none;
-    }
+  display: flex;
+  background-color: #f3f3f3;
+  padding: 0 35px;
+  a {
+    text-decoration: none;
+  }
 }
 .header-left {
+  display: flex;
+  align-items: center;
+  .item-text {
+    @include styleText($color-blue-4, $fs-1, $fw-1);
+    padding: 0 $pd-4;
+    &:hover {
+      @include styleTextHover($color-blue-2);
+    }
+  }
+  img {
+    width: 50px;
+    padding-bottom: $pd-3;
+  }
+  .ford-use {
+    border-left: 1px solid $color-gray-3;
+  }
+  .bronco {
     display: flex;
     align-items: center;
-    .item-text {
-        @include styleText($color-blue-4, $fs-1, $fw-1);
-        padding: 0 $pd-4;
-        &:hover {
-            @include styleTextHover($color-blue-2);
-        }
-    }
-    img {
-        width: 50px;
-        padding-bottom: $pd-3;
-    }
-    .ford-use {
-        border-left: 1px solid $color-gray-3;
-    }
-    .bronco {
-        display: flex;
-        align-items: center;
-    }
-    .vehicles {
-        display: none;
-    }
+  }
+  .vehicles {
+    display: none;
+  }
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .item-text {
-        @include styleText($color-blue-2, $fs-3, $fw-1);
-        padding: 0 $pd-4;
-    }
-    i {
-        @include styleText($color-blue-4, $fs-6, null);
-    }
-    &:hover i {
-        @include styleTextHover($color-blue-2);
-    }
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .item-text {
+    @include styleText($color-blue-2, $fs-3, $fw-1);
+    padding: 0 $pd-4;
+  }
+  i {
+    @include styleText($color-blue-4, $fs-6, null);
+  }
+  &:hover i {
+    @include styleTextHover($color-blue-2);
+  }
 }
 .header-nav {
-    display: flex;
-    // padding: $pd-6 35px;
-    padding: 0 35px;//exchange
-    background-color: white;
-    a {
-        text-decoration: none;
-    }
+  display: flex;
+  // padding: $pd-6 35px;
+  padding: 0 35px; //exchange
+  background-color: white;
+  a {
+    text-decoration: none;
+  }
 }
 .logo img {
-    width: 125px;
-    padding: 0 $pd-8 $pd-3 0;
+  width: 125px;
+  padding: 0 $pd-8 $pd-3 0;
 }
 .ford-navbar {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .nav-left {
-    display: flex;
-    align-items: center;
-    .item-text {
-        @include styleText($color-blue-1, $fs-3, $fw-1);
-        padding: 0 $pd-4;
-        &:hover {
-            @include styleTextHover($color-blue-4);
-        }
+  display: flex;
+  align-items: center;
+  .item-text {
+    @include styleText($color-blue-1, $fs-3, $fw-1);
+    padding: 0 $pd-4;
+    &:hover {
+      @include styleTextHover($color-blue-4);
     }
-    .vehicles {
-        display: none;
-    }
+  }
+  .vehicles {
+    display: none;
+  }
 }
 .nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 0;
+  .item-text {
+    @include styleText($color-blue-1, $fs-1, $fw-1);
+    padding: 0 $pd-4;
+    &:hover {
+      @include styleTextHover($color-blue-4);
+    }
+  }
+  .account-icon {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    text-align: right;
-    padding-right: 0;
-    .item-text {
-        @include styleText($color-blue-1, $fs-1, $fw-1);
-        padding: 0 $pd-4;
-        &:hover {
-            @include styleTextHover($color-blue-4);
-        }
+  }
+  img {
+    width: 25px;
+  }
+  .dealership {
+    display: none;
+    .item-dealership {
+      @include styleText($color-blue-1, $fs-3, $fw-1);
+      padding: 0 $pd-4;
     }
-    .account-icon {
-        display: flex;
-        align-items: center;
+    i {
+      @include styleText($color-blue-1, $fs-6, null);
     }
-    img {
-        width: 25px;
-    }
-    .dealership {
-        display: none;
-        .item-dealership {
-            @include styleText($color-blue-1, $fs-3, $fw-1);
-            padding: 0 $pd-4;
-        }
-        i {
-            @include styleText($color-blue-1, $fs-6, null);
-        }
-    }
-    .header-nav-submenu {
-        display: none;
-    }
+  }
+  .header-nav-submenu {
+    display: none;
+  }
 }
 .menu {
-    text-align: right;
-    .menu-icon {
-        text-align: center;
-        i {
-            @include styleText($color-blue-4, $fs-8, null);
-        }
-        p {
-            @include styleText($color-gray-1, $fs-1, null);
-            margin: 0;
-        }
-        border: none;
-        background-color: white;
+  text-align: right;
+  .menu-icon {
+    text-align: center;
+    i {
+      @include styleText($color-blue-4, $fs-8, null);
     }
+    p {
+      @include styleText($color-gray-1, $fs-1, null);
+      margin: 0;
+    }
+    border: none;
+    background-color: white;
+  }
 }
 
 //RESPONSIVE
 @include responsive("extra-large") {
-    .header-nav {
-        .account {
-            display: none;
-        }
+  .header-nav {
+    .account {
+      display: none;
     }
-    .nav-left {
-        .item-text {
-            padding: 0 $pd-3;
-            // font-size: $fs-2;
-        }
+  }
+  .nav-left {
+    .item-text {
+      padding: 0 $pd-3;
+      // font-size: $fs-2;
     }
+  }
 }
 
 //start
-header{
-    .collapsing{
-        transition: all .5s;
-    }
+header {
+  .collapsing {
+    transition: all 0.5s;
+  }
 }
 
-.nav-right{
-    .item-link {
-        display: block;
-        display: flex;
-        position: relative;
-        width: 100%;
-        padding: 1.5rem 35px;
-        font-size: $fs-3;
-        color: $color-blue-1;
-        border-bottom: .5px solid rgba(black, .1);
-    
-        &::after {
-            content: "\f054";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            right: 35px;
-            position: absolute;
-        }
+.nav-left {
+  .submenu-content {
+    max-height: 100vh;
+    overflow: auto;
+  }
+
+  .item-product {
+    padding-top: $dimension-6;
+    margin-bottom: $dimension-6;
+    position: relative;
+
+    p {
+      margin-bottom: $pd-3;
     }
+
+    p.highlight {
+      position: absolute;
+      top: 0;
+      height: $dimension-6;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0;
+      @include styleText($color-gray-5, $fs-1, $fw-0);
+  
+      span.highlight-text{
+        // display: inline-block;
+        padding-left: $pd-3;
+      }
+    }
+
+    p.name a {
+      @include styleText($color-blue-4, $fs-3, $fw-2);
+      text-transform: uppercase;
+
+      &:hover::after{
+        content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      padding-left: $pd-3;
+      }
+    }
+
+    p.price {
+      @include styleText($color-gray-5, $fs-1, $fw-0);
+
+      sup{
+        padding-left: $pd-3;
+      }
+    }
+
+    [class*=other]{
+      @include styleText($color-blue-1,$fs-3,$fw-0);
+      
+      a {
+        display: inline-block;
+
+        &::after{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $color-blue-1;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width:992px){
-        .nav-left{
-            .submenu-content{
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-            }
+.nav-right {
+  .item-link {
+    display: block;
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 35px;
+    font-size: $fs-3;
+    color: $color-blue-1;
+    border-bottom: 0.5px solid rgba(black, 0.1);
 
-            [class*=col]:not(.submenu-content){
-                position: static;
-            }
-
-            position: static;
-        }
-
-        .nav-right{
-            .submenu-content{
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #ffffff;
-
-                
-            }
-        }
-
-        .ford-navbar{
-            position: static;
-        }
-
-        .nav-left,
-        .nav-right,
-        .normal-menu {
-            padding-top: $pd-6;
-            padding-bottom: $pd-6;
-        }
-
-
+    &::after {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      right: 35px;
+      position: absolute;
+    }
+  }
 }
 
-@include responsive('large'){
-    a[aria-expanded="true"]{
-        background-color: $color-blue-4;
-        color: $color-white !important;
-        box-shadow: 0 8px 4px -4px #00000033;
+@media screen and (min-width: 992px) {
+  .nav-left {
+    .submenu-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
     }
 
-    .collapse.show > .item-text{
-        background-color: #ffffff;
+    [class*="col"]:not(.submenu-content) {
+      position: static;
     }
 
-    .all-vehicles a[aria-expanded="true"]{
-        background-color: #f1f1f1 !important;
-        font-weight: $fw-0;
-        color: $color-blue-4 !important;
+    position: static;
+  }
 
+  .nav-right {
+    .submenu-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
     }
+  }
+
+  .ford-navbar {
+    position: static;
+  }
+
+  .nav-left,
+  .nav-right,
+  .normal-menu {
+    padding-top: $pd-6;
+    padding-bottom: $pd-6;
+  }
+}
+
+@include responsive("large") {
+  a[aria-expanded="true"] {
+    background-color: $color-blue-4;
+    color: $color-white !important;
+    box-shadow: 0 8px 4px -4px #00000033;
+  }
+
+  .collapse.show > .item-text {
+    background-color: #ffffff;
+  }
+
+  .all-vehicles a[aria-expanded="true"] {
+    background-color: #f1f1f1 !important;
+    font-weight: $fw-0;
+    color: $color-blue-4 !important;
+  }
 }
 //end
 
-@media screen and (min-width:992px) and (max-width:1008px) {
-    .nav-left {
-        .item-text {
-            padding: 0 $pd-3;
-            font-size: $fs-2;
-        }
+@media screen and (min-width: 992px) and (max-width: 1008px) {
+  .nav-left {
+    .item-text {
+      padding: 0 $pd-3;
+      font-size: $fs-2;
     }
-
-
+  }
 }
 @media screen and (max-width: 991.9px) {
-    .logo {
-        width: 50%;
-    }
-    .menu {
-        width: 50%;
-    }
-    .header-top {
-        display: none;
-    }
-    .header-nav {
-        overflow: hidden;
-        padding: 0;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        .mobile-menu {
-            padding: 20px 35px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            // align-items: center;
-            box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
-            height: 70px;
+  .logo {
+    width: 50%;
+  }
+  .menu {
+    width: 50%;
+  }
+  .header-top {
+    display: none;
+  }
+  .header-nav {
+    overflow: auto;
+    max-height: 100vh;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .mobile-menu {
+      padding: 20px 35px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // align-items: center;
+      box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
+      height: 70px;
 
-            button{
-                height: auto;
-            }
+      button {
+        height: auto;
+      }
+    }
+    .ford-navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2px 0 0 0;
+      // overflow-y: scroll;
+      background-color: #f3f3f3;
+    }
+
+    &.mobile-view {
+      .menu-icon {
+        .fa-times {
+          display: none;
         }
-        .ford-navbar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2px 0 0 0;
-            // overflow-y: scroll;
-            background-color: #f3f3f3;
-        }
+      }
 
-        &.mobile-view {
-            .menu-icon {
-                .fa-times {
-                    display: none;
-                }
-            }
-
-            &.expanded {
-                // .ford-navbar{
-                //     height: 100vh;
-                // }
-
-                .nav-right,
-                .nav-left {
-                    display: block;
-                }
-                .mobile-menu{
-                    box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
-                    
-                }
-                .menu-icon {
-                    .fa-times {
-                        display: block;
-                    }
-                    p {
-                        display: none;
-                    }
-                    .fa-bars {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    .nav-left {
-        display: none;
-        width: 100%;
-        text-align: left;
-        padding: 0;
-
-        // .all-vehicles {
-        //     display: none;
+      &.expanded {
+        // .ford-navbar{
+        //     height: 100vh;
         // }
-        .vehicles {
-            display: block;
-        }
-        .item-text {
-            position: relative;
-            width: 100%;
-            display: block;
-            padding: 1.5rem 35px;
-            border-bottom: .5px solid rgba(black, .1);
-            font-size: $fs-3;
 
-            &::after {
-                content: "\f077";
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                right: 35px;
-                position: absolute;
-            }
+        .nav-right,
+        .nav-left {
+          display: block;
         }
+        .mobile-menu {
+          box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+        }
+        .menu-icon {
+          .fa-times {
+            display: block;
+          }
+          p {
+            display: none;
+          }
+          .fa-bars {
+            display: none;
+          }
+        }
+      }
     }
-    .nav-right {
-        padding: 0;
-        display: none;
-        width: 100%;
-        text-align: left;
-        .account {
-            display: block;
-        }
-        .dealership {
-            display: block;
-            display: flex;
-            position: relative;
-            width: 100%;
-            padding: 1.5rem 35px;
-            font-size: $fs-3;
-            color: $color-blue-1;
-            border-bottom: .5px solid rgba(black, .1);
+  }
+  .nav-left {
+    display: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
 
-            &::after {
-                content: "\f054";
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                right: 35px;
-                position: absolute;
-            }
-        }
-        .header-nav-submenu {
-            display: block;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            a {
-                text-decoration: none;
-            }
-            .item-submenu {
-                @include styleText($color-blue-4, $fs-1, $fw-1);
-                padding: 0 $pd-4;
-                &:hover {
-                    @include styleTextHover($color-blue-2);
-                }
-                img {
-                    width: 50%;
-                }
-            }
-        }
-        a.item-text:not(.item-link) {
-            padding: 1.5rem 35px;
-            position: relative;
-            width: 100%;
-            display: block;
-
-            font-size: $fs-3;
-            border-bottom: .5px solid rgba(black, .1);
-
-            &::after {
-                content: "\f077";
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                right: 35px;
-                position: absolute;
-            }
-        }
-
-        a.account-icon {
-            display: flex !important;
-        }
+    // .all-vehicles {
+    //     display: none;
+    // }
+    .vehicles {
+      display: block;
     }
-    
-    a.item-text.collapsed:not(.item-link)::after {
-        transform: rotate(180deg);
+    .item-text {
+      position: relative;
+      width: 100%;
+      display: block;
+      padding: 1.5rem 35px;
+      border-bottom: 0.5px solid rgba(black, 0.1);
+      font-size: $fs-3;
+
+      &::after {
+        content: "\f077";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        right: 35px;
+        position: absolute;
+        transition: all 1s;
+      }
+    }
+  }
+  .nav-right {
+    padding: 0;
+    display: none;
+    width: 100%;
+    text-align: left;
+    .account {
+      display: block;
+    }
+    .dealership {
+      display: block;
+      display: flex;
+      position: relative;
+      width: 100%;
+      padding: 1.5rem 35px;
+      font-size: $fs-3;
+      color: $color-blue-1;
+      border-bottom: 0.5px solid rgba(black, 0.1);
+
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        right: 35px;
+        position: absolute;
+      }
+    }
+    .header-nav-submenu {
+      display: block;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+      .item-submenu {
+        @include styleText($color-blue-4, $fs-1, $fw-1);
+        padding: 0 $pd-4;
+        &:hover {
+          @include styleTextHover($color-blue-2);
+        }
+        img {
+          width: 50%;
+        }
+      }
+    }
+    a.item-text:not(.item-link) {
+      padding: 1.5rem 35px;
+      position: relative;
+      width: 100%;
+      display: block;
+
+      font-size: $fs-3;
+      border-bottom: 0.5px solid rgba(black, 0.1);
+
+      &::after {
+        content: "\f077";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        right: 35px;
+        position: absolute;
+        transition: all 1s;
+      }
     }
 
+    a.account-icon {
+      display: flex !important;
+    }
+  }
+
+  a.item-text.collapsed:not(.item-link)::after {
+    transform: rotate(180deg);
+    // transition: all 1s;
+  }
 }
 
-@media screen and (min-width: 992px){
-    .nav-left {
-        .item-text {
-            &:first-child{
-                margin-left: 7px;
-            }
-        }
+@media screen and (min-width: 992px) {
+  .nav-left {
+    .item-text {
+      &:first-child {
+        margin-left: 7px;
+      }
     }
+  }
 }
