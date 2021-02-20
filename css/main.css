@@ -864,14 +864,14 @@ header .collapsing {
 
 .myCarousel .carousel-control-prev,
 .myCarousel .carousel-control-next {
-  width: 4%;
+  width: 5.5rem;
 }
 
 .myCarousel .carousel-control-prev i,
 .myCarousel .carousel-control-next i {
   color: #fff;
   font-size: 42px;
-  width: 65px;
+  width: 50px;
   height: 70px;
   line-height: 70px;
   border: 1px solid transparent;
