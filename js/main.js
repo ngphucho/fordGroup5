@@ -59,14 +59,65 @@ $(document).click(function (e) {
   }
 });
 
-//click
-var isHide = true;
-document.getElementById("btnClick").onclick = function () {
-  if (isHide) {
-    document.getElementById("backToTop").classList.toggle("show")
-    isHide = false;
-  } else {
-    document.getElementById("backToTop").classList.toggle("show");
-    isHide = true;
-  }
+// hide/show backToTop button
+window.onscroll = function () {
+  backToTopControl();
 };
+
+var lastScrollTop = 0;
+function backToTopControl() {
+  var button = getELE("backToTop");
+  if (
+    document.body.scrollTop > 550 ||
+    document.documentElement.scrollTop > 550
+  ) {
+    // alert("slkdfjsdlfkjsdf");
+    // if(!button.classList.contains("show")){
+    //   button.classList.add("show");
+    // }
+
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+      // downscroll code
+      if (button.classList.contains("show")) {
+        button.classList.remove("show");
+      }
+    } else {
+      // upscroll code
+      if (!button.classList.contains("show")) {
+        button.classList.add("show");
+      }
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+  } else {
+    if (button.classList.contains("show")) {
+      button.classList.remove("show");
+    }
+  }
+}
+
+//crolling smooth
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a.smooth").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});

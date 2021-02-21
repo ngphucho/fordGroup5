@@ -2,10 +2,10 @@
   position: fixed;
 
   opacity: 0;
-  display: block;
-  bottom: 0;
-  right: 0;
-  transition: all 2s;
+  visibility: hidden;
+  bottom: 50px;
+  left: 100%;
+  // transition: opacity 10s linear, visibility 0s linear 10s;
 
   a {
     &:hover {
@@ -26,7 +26,7 @@
 
 .backToTop.show {
   opacity: 1;
-//   display: block;
-  transform: translate(-20px, -50px);
-//   transition: all 2s;
+  visibility: visible;
+  transform: translateX(-70px);
+  transition: all 1s;
 }
