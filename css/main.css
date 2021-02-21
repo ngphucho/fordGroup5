@@ -184,8 +184,8 @@ body {
 }
 
 header {
-  -webkit-box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
-          box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+  -webkit-box-shadow: 0 8px 4px -4px #00000033;
+          box-shadow: 0 8px 4px -4px #00000033;
   width: 100%;
   position: fixed;
   top: 0;
@@ -212,6 +212,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5px 0;
 }
 
 .header-left .item-text {
@@ -233,7 +234,7 @@ header {
 }
 
 .header-left .ford-use {
-  border-left: 1px solid #a7a7a7;
+  border-left: 1px solid #d6d5d5;
 }
 
 .header-left .bronco {
@@ -243,6 +244,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-left .mustang {
+  border-right: 1px solid #d6d5d5;
 }
 
 .header-left .vehicles {
@@ -645,8 +650,8 @@ header .collapsing {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
-            box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
+    -webkit-box-shadow: 0 8px 4px -4px #00000033;
+            box-shadow: 0 8px 4px -4px #00000033;
     height: 70px;
   }
   .header-nav .mobile-menu button {
@@ -675,8 +680,8 @@ header .collapsing {
     display: block;
   }
   .header-nav.mobile-view.expanded .mobile-menu {
-    -webkit-box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
-            box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+    -webkit-box-shadow: 0 8px 4px -4px #00000033;
+            box-shadow: 0 8px 4px -4px #00000033;
   }
   .header-nav.mobile-view.expanded .menu-icon .fa-times {
     display: block;

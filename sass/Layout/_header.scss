@@ -1,5 +1,5 @@
 header {
-  box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+  box-shadow: 0 8px 4px -4px #00000033;
   width: 100%;
   position: fixed;
   top: 0;
@@ -17,6 +17,7 @@ header {
 .header-left {
   display: flex;
   align-items: center;
+  padding: 5px 0;
   .item-text {
     @include styleText($color-blue-4, $fs-1, $fw-1);
     padding: 0 $pd-4;
@@ -29,11 +30,14 @@ header {
     padding-bottom: $pd-3;
   }
   .ford-use {
-    border-left: 1px solid $color-gray-3;
+    border-left: 1px solid #d6d5d5;
   }
   .bronco {
     display: flex;
     align-items: center;
+  }
+  .mustang {
+    border-right: 1px solid #d6d5d5;
   }
   .vehicles {
     display: none;
@@ -323,7 +327,7 @@ header {
     .list-product {
       padding-top: $pd-4;
 
-      .item-product{
+      .item-product {
         width: 20vw;
       }
     }
@@ -365,8 +369,8 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      // align-items: center;
-      box-shadow: 0px 3px rgba(211, 211, 211, 0.5);
+      
+      box-shadow: 0 8px 4px -4px #00000033;
       height: 70px;
 
       button {
@@ -379,7 +383,6 @@ header {
       justify-content: space-between;
       align-items: center;
       padding: 2px 0 0 0;
-      // overflow-y: scroll;
       background-color: #f3f3f3;
     }
 
@@ -391,16 +394,13 @@ header {
       }
 
       &.expanded {
-        // .ford-navbar{
-        //     height: 100vh;
-        // }
 
         .nav-right,
         .nav-left {
           display: block;
         }
         .mobile-menu {
-          box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+          box-shadow: 0 8px 4px -4px #00000033;
         }
         .menu-icon {
           .fa-times {
@@ -421,10 +421,6 @@ header {
     width: 100%;
     text-align: left;
     padding: 0;
-
-    // .all-vehicles {
-    //     display: none;
-    // }
     .vehicles {
       display: block;
     }
@@ -478,6 +474,7 @@ header {
       text-align: center;
       justify-content: center;
       align-items: center;
+      
       a {
         text-decoration: none;
       }
