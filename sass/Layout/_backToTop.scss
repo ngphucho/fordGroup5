@@ -1,0 +1,32 @@
+.backToTop {
+  position: fixed;
+
+  opacity: 0;
+  display: block;
+  bottom: 0;
+  right: 0;
+  transition: all 2s;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+    i {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-color: #00000099;
+      @include styleText($color-white, $fs-4, $fw-3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.backToTop.show {
+  opacity: 1;
+//   display: block;
+  transform: translate(-20px, -50px);
+//   transition: all 2s;
+}

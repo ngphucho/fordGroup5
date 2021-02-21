@@ -14,47 +14,59 @@ getELE("btnWhapHappening").onclick = function () {
     text.innerHTML = "View All";
     icon.innerHTML = "+";
   }
-  console.log(text,icon);
-  console.log(getELE("btnWhapHappening").querySelector("span.text").innerHTML,getELE("btnWhapHappening").querySelector("span.icon").innerHTML)
+  console.log(text, icon);
+  console.log(
+    getELE("btnWhapHappening").querySelector("span.text").innerHTML,
+    getELE("btnWhapHappening").querySelector("span.icon").innerHTML
+  );
 };
 
 //Menu
-$(document).ready(function(){
-  $('header').each(function(){
-    var headerEle = $('header .header-nav');
+$(document).ready(function () {
+  $("header").each(function () {
+    var headerEle = $("header .header-nav");
 
-    if(window.innerWidth <= 992){
-      headerEle.addClass('mobile-view');
+    if (window.innerWidth <= 992) {
+      headerEle.addClass("mobile-view");
+    } else {
+      headerEle.removeClass("mobile-view");
     }
-    else{
-      headerEle.removeClass('mobile-view');
-    }
-    
-    $('header .menu-icon').on('click', function(){
-      if(headerEle.hasClass('mobile-view')){
-        if(headerEle.hasClass('expanded')){
-          headerEle.removeClass('expanded');
-        }
-        else{
-          headerEle.addClass('expanded');
+
+    $("header .menu-icon").on("click", function () {
+      if (headerEle.hasClass("mobile-view")) {
+        if (headerEle.hasClass("expanded")) {
+          headerEle.removeClass("expanded");
+        } else {
+          headerEle.addClass("expanded");
         }
       }
-    })
-  
-    $(window).on('resize', function(){
-      if(window.innerWidth <= 992){
-        headerEle.addClass('mobile-view');
+    });
+
+    $(window).on("resize", function () {
+      if (window.innerWidth <= 992) {
+        headerEle.addClass("mobile-view");
+      } else {
+        headerEle.removeClass("mobile-view");
       }
-      else{
-        headerEle.removeClass('mobile-view');
-      }
-    })
-  })
-})
+    });
+  });
+});
 
 //auto close subitem when click outside
-$(document).click(function(e) {
-	if (!e.target.closest('.submenu-content')) {
-    $('.auto-hide').collapse('hide');	
-    } 
+$(document).click(function (e) {
+  if (!e.target.closest(".submenu-content")) {
+    $(".auto-hide").collapse("hide");
+  }
 });
+
+//click
+var isHide = true;
+document.getElementById("btnClick").onclick = function () {
+  if (isHide) {
+    document.getElementById("backToTop").classList.toggle("show")
+    isHide = false;
+  } else {
+    document.getElementById("backToTop").classList.toggle("show");
+    isHide = true;
+  }
+};

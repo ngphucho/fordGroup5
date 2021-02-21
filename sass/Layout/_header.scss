@@ -1,5 +1,6 @@
 header {
-  box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+  // box-shadow: 0px 2px rgba(211, 211, 211, 0.521);
+  box-shadow: 0 8px 4px -4px #00000033;
   width: 100%;
   position: fixed;
   top: 0;
@@ -154,145 +155,196 @@ header {
 //start
 header {
   .collapsing {
-    transition: all 0.5s;
-  }
-}
-
-.nav-left {
-  .submenu-content {
-    max-height: calc(100vh - 116px);
-    overflow: auto;
+    transition: all 0.2s;
   }
 
-  .item-product {
-    padding-top: $dimension-6;
-    margin-bottom: $dimension-6;
-    position: relative;
-
-    p {
-      margin-bottom: $pd-3;
+  .nav-left {
+    .list-product {
+      padding-top: $pd-4;
     }
 
-    p.highlight {
-      position: absolute;
-      top: 0;
-      height: $dimension-6;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 0;
-      @include styleText($color-gray-5, $fs-1, $fw-0);
+    .submenu-content {
+      max-height: calc(100vh - 116px);
+      overflow: auto;
+    }
 
-      span[class*="icon-"] {
-        // display: inline-block;
-        margin-right: $pd-3;
+    .item-product {
+      padding-top: $dimension-6;
+      margin-bottom: $dimension-6;
+      position: relative;
+
+      p {
+        margin-bottom: $pd-3;
       }
-    }
 
-    p.name a {
-      @include styleText($color-blue-4, $fs-3, $fw-2);
-      text-transform: uppercase;
+      p.highlight {
+        position: absolute;
+        top: 0;
+        height: $dimension-6;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        @include styleText($color-gray-5, $fs-1, $fw-0);
 
-      &:hover::after {
-        content: "\f054";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        padding-left: $pd-3;
+        span[class*="icon-"] {
+          // display: inline-block;
+          margin-right: $pd-3;
+        }
       }
-    }
 
-    p.price {
-      @include styleText($color-gray-5, $fs-1, $fw-0);
+      p.name a {
+        @include styleText($color-blue-4, $fs-3, $fw-2);
+        text-transform: uppercase;
 
-      sup {
-        padding-left: $pd-3;
+        &:hover::after {
+          content: "\f054";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          padding-left: $pd-3;
+        }
       }
-    }
 
-    [class*="other"] {
-      @include styleText($color-blue-1, $fs-3, $fw-0);
+      p.price {
+        @include styleText($color-gray-5, $fs-1, $fw-0);
 
-      a {
-        display: inline-block;
+        sup {
+          padding-left: $pd-3;
+        }
+      }
 
-        &::after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 1px;
-          background-color: $color-blue-1;
-          opacity: 0.5;
+      [class*="other"] {
+        @include styleText($color-blue-1, $fs-3, $fw-0);
+
+        a {
+          display: inline-block;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $color-blue-1;
+            opacity: 0.5;
+          }
         }
       }
     }
+
+    .ford-btnBlue {
+      border-radius: $border-radius-1;
+      margin: $pd-5;
+      padding: $pd-4 $pd-6 !important;
+      font-size: $fs-1;
+      min-width: 186px;
+    }
   }
 
-  .ford-btnBlue {
-    border-radius: $border-radius-1;
-    margin: $pd-5;
-    padding: $pd-4 $pd-6 !important;
-    font-size: $fs-1;
-    min-width: 186px;
-  }
-}
+  .nav-right {
+    .item-link {
+      display: block;
+      display: flex;
+      position: relative;
+      width: 100%;
+      padding: 1.5rem 35px;
+      font-size: $fs-3;
+      color: $color-blue-1;
+      border-bottom: 0.5px solid rgba(black, 0.1);
 
-.nav-right {
-  .item-link {
-    display: block;
-    display: flex;
-    position: relative;
-    width: 100%;
-    padding: 1.5rem 35px;
-    font-size: $fs-3;
-    color: $color-blue-1;
-    border-bottom: 0.5px solid rgba(black, 0.1);
-
-    &::after {
-      content: "\f054";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      right: 35px;
-      position: absolute;
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        right: 35px;
+        position: absolute;
+      }
     }
   }
 }
 
 @media screen and (min-width: 992px) {
-  .nav-left {
-    .submenu-content {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
+  header {
+    a.item-text:not(.item-link) {
+      display: inline-block;
+      line-height: 25px;
     }
 
-    [class*="col"]:not(.submenu-content) {
+    .nav-left {
+      .submenu-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        &::before {
+          content: "";
+          position: fixed;
+          top: 106px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.8);
+          z-index: 100;
+        }
+      }
+
+      [class*="col"]:not(.submenu-content) {
+        position: static;
+      }
+
       position: static;
     }
 
-    position: static;
-  }
+    .nav-left .all-vehicles a[aria-expanded="true"],
+    .nav-right a[aria-expanded="true"] {
+      position: relative;
+      line-height: 25px;
 
-  .nav-right {
-    .submenu-content {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #ffffff;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 150%;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-blue-1;
+      }
     }
-  }
 
-  .ford-navbar {
-    position: static;
-  }
+    .nav-right {
+      .submenu-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        max-height: calc(100vh - 116px);
 
-  .nav-left,
-  .nav-right,
-  .normal-menu {
-    padding-top: $pd-6;
-    padding-bottom: $pd-6;
+        &::before {
+          content: "";
+          position: fixed;
+          top: 106px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.8);
+          z-index: 100;
+        }
+      }
+    }
+
+    .ford-navbar {
+      position: static;
+    }
+
+    .nav-left,
+    .nav-right,
+    .normal-menu {
+      padding-top: $pd-6;
+      padding-bottom: $pd-6;
+    }
   }
 }
 
@@ -302,6 +354,7 @@ header {
       background-color: $color-blue-4;
       color: $color-white !important;
       box-shadow: 0 8px 4px -4px #00000033;
+      z-index: 1;
     }
 
     .collapse.show > .item-text {
@@ -321,9 +374,7 @@ header {
     }
 
     .list-product {
-      padding-top: $pd-4;
-
-      .item-product{
+      .item-product {
         width: 20vw;
       }
     }
