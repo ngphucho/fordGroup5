@@ -5,6 +5,7 @@
   visibility: hidden;
   bottom: 50px;
   left: 100%;
+  transition: all 1s;
   // transition: opacity 10s linear, visibility 0s linear 10s;
 
   a {
@@ -28,5 +29,38 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(-70px);
+  // transition: all 1s;
+}
+
+#scrollDownButton {
+  position: fixed;
+  z-index: 16;
+
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   transition: all 1s;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+    i {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      border: 2px solid #ffffff80;
+      background-color: #00000099;
+      @include styleText($color-white, $fs-4, $fw-3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+#scrollDownButton.hide {
+  opacity: 0;
 }

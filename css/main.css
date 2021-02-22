@@ -944,6 +944,10 @@ header .nav-right .item-link::after {
   text-decoration: none;
 }
 
+.myCarousel .carousel-indicators {
+  padding-top: 110px;
+}
+
 .myCarousel .carousel-indicators li {
   height: 10px;
   width: 10px;
@@ -1207,6 +1211,8 @@ header .nav-right .item-link::after {
   visibility: hidden;
   bottom: 50px;
   left: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .backToTop a:hover {
@@ -1237,8 +1243,47 @@ header .nav-right .item-link::after {
   visibility: visible;
   -webkit-transform: translateX(-70px);
           transform: translateX(-70px);
+}
+
+#scrollDownButton {
+  position: fixed;
+  z-index: 16;
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+#scrollDownButton a:hover {
+  text-decoration: none;
+}
+
+#scrollDownButton a i {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 2px solid #ffffff80;
+  background-color: #00000099;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#scrollDownButton.hide {
+  opacity: 0;
 }
 
 .whatHappening [class*="col-"] {

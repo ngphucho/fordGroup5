@@ -59,10 +59,15 @@ $(document).click(function (e) {
   }
 });
 
-// hide/show backToTop button
 window.onscroll = function () {
+  // hide/show backToTop button
   backToTopControl();
+  // hide scroll down button
+  hideScroolDownButton();
 };
+
+// add event click to scroll down button
+getELE("scrollDownButton").addEventListener("click", hide);
 
 var lastScrollTop = 0;
 function backToTopControl() {
@@ -86,6 +91,9 @@ function backToTopControl() {
       // upscroll code
       if (!button.classList.contains("show")) {
         button.classList.add("show");
+        setTimeout(function () {
+          button.classList.remove("show");
+        }, 2500);
       }
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
@@ -96,11 +104,28 @@ function backToTopControl() {
   }
 }
 
-//crolling smooth
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a.smooth").on('click', function(event) {
+// hide scroll down button
+function hideScroolDownButton() {
+  if (
+    document.body.scrollTop > 620 ||
+    document.documentElement.scrollTop > 620
+  ) {
+    hide();
+  }
+}
+function hide() {
+  if (!getELE("scrollDownButton").classList.contains("hide")) {
+    getELE("scrollDownButton").classList.add("hide");
+    setTimeout(function () {
+      getELE("scrollDownButton").style.display = "none";
+    }, 1000);
+  }
+}
 
+//crolling smooth
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a.smooth").on("click", function (event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -111,13 +136,16 @@ $(document).ready(function(){
 
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        800,
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
     } // End if
   });
 });
