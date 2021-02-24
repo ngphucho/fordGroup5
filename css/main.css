@@ -863,6 +863,104 @@ header .nav-right .item-link::after {
   }
 }
 
+.footer .container-fluid {
+  padding: 0 35px;
+}
+
+.footer .content {
+  position: relative;
+}
+
+.footer .footer-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 48px;
+  line-height: 48px;
+  vertical-align: middle;
+}
+
+.footer .footer-logo img {
+  width: 100%;
+  display: inline-block;
+  width: 73px;
+  height: 26px;
+}
+
+.footer .language {
+  padding: 15px 0;
+}
+
+.footer .language a {
+  color: #0276b3;
+  font-size: 1.3rem;
+}
+
+.footer .language a span {
+  padding-left: 25px;
+  text-decoration: underline;
+}
+
+.footer .language a:hover {
+  text-decoration: none;
+}
+
+.footer .copyright {
+  padding: 5px 0;
+}
+
+.footer .copyright a {
+  color: #555;
+  font-size: 1.3rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.footer ul li a {
+  padding: 5px 25px;
+  padding-left: 0;
+  color: #555;
+  font-size: 1.3rem;
+}
+
+.footer .copyright a:hover,
+.footer ul li a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+@media screen and (max-width: 767.9px) {
+  .footer .footer-logo {
+    position: relative;
+  }
+  .footer ul li {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer ul {
+    width: 80%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer ul {
+    max-width: 100%;
+  }
+  .footer ul li a {
+    padding-right: 25px;
+  }
+}
+
 .myCarousel {
   padding-top: 116px;
 }
