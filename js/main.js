@@ -166,13 +166,13 @@ $(window).resize(function () {
       x[i].setAttribute("data-toggle", "collapse");
     }
     // ẩn
-    $(".collapse").collapse('hide');
+    $(".footerNavbar .collapse").collapse('hide');
   }else if(width > 992){
     for(var i = 1; i < x.length; i++){
       x[i].setAttribute("data-toggle", "");
     }
     // hiện
-    $(".collapse").collapse('show');
+    $(".footerNavbar .collapse").collapse('show');
   }
   // if(width <= 767.9){
   //   y[0].setAttribute("data-toggle", "collapse");
@@ -184,9 +184,9 @@ $(window).resize(function () {
 
   if(width <= 767.9){
     x[0].setAttribute("data-toggle", "collapse");
-    $(".collapse").collapse('hide');
+    $(".footerNavbar .collapse").collapse('hide');
   }else{
     x[0].setAttribute("data-toggle", "");
-    $(".collapse").collapse('show');
+    $(".footerNavbar .collapse").collapse('show');
   }
 });
