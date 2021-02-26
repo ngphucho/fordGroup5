@@ -1,5 +1,6 @@
 // $modal-fade-transform: scale(5);
 .footer {
+  margin-bottom: 20px;
   .container-fluid {
     padding: 0 35px;
   }
@@ -25,27 +26,33 @@
   .language {
     padding: $pd-5 0;
     a {
-      @include styleText($color-blue-1, $fs-13, null);
+      @include styleText($color-blue-1, $fs-14, null);
       span {
         padding-left: $pd-7;
         text-decoration: underline;
       }
-      
-      &:hover{
-          text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
       }
     }
 
-    .ford-btnBlue{
+    .ford-btnBlue {
       display: block;
       max-width: 270px;
+    }
+
+    &:hover {
+      a{
+        color:$color-blue-4;
+      }
     }
   }
 
   .copyright {
     padding: $pd-3 0;
     a {
-      @include styleText($color-gray-4, $fs-13, null);
+      @include styleText($color-gray-4, $fs-17, null);
     }
   }
 
@@ -59,16 +66,60 @@
       a {
         padding: $pd-3 25px;
         padding-left: 0;
-        @include styleText($color-gray-4, $fs-13, null);
+        @include styleText($color-gray-4, $fs-17, null);
       }
     }
   }
 
   .copyright a,
-  ul li a{
-    &:hover{
-        text-decoration: none;
-        color: $color-gray-1;
+  ul li a {
+    &:hover {
+      text-decoration: none;
+      color: $color-gray-1;
+    }
+  }
+
+  .modal {
+    .modal-dialog,
+    .modal-content {
+      width: 100%;
+      height: 100%;
+      background-color: #00000080;
+    }
+
+
+    .content {
+      
+      .content-top {
+        padding-top: 15vh;
+      }
+
+      .content-bottom {
+        h2 {
+          @include styleText($color-white, $fs-7, null);
+          margin: $dimension-1 0;
+        }
+
+        span {
+          margin: $margin-1 auto;
+        }
+
+        text-align: center;
+      }
+
+      .btnClose {
+        display: block;
+        width: $dimension-2;
+        height: $dimension-2;
+        @include styleText($color-gray-3, $dimension-2, null);
+        margin-left: auto;
+        margin-right: $margin-2;
+
+        &:hover{
+          color: $color-white;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -97,13 +148,22 @@
 }
 
 @include responsive("extra-large") {
-    .footer {
-        ul {
-          max-width: 100%;
+  .footer {
+    ul {
+      max-width: 100%;
 
-          li a{
-              padding-right: $pd-7;
-          }
-        }
+      li a {
+        padding-right: $pd-7;
       }
     }
+  }
+}
+
+@media (min-width: 576px){
+  .modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+}
+}
+

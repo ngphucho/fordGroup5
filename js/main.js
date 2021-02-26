@@ -150,9 +150,6 @@ $(document).ready(function () {
   });
 });
 
-// getELE("modalclick").addEventListener("click", function () {
-//   $("#staticBackdrop").modal("hide");
-//   console.log("click");
 // collapse nav footer
 $(window).resize(function () {
   // chiều dài cửa sổ
