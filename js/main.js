@@ -150,7 +150,43 @@ $(document).ready(function () {
   });
 });
 
-getELE("modalclick").addEventListener("click", function () {
-  $("#staticBackdrop").modal("hide");
-  console.log("click");
+// getELE("modalclick").addEventListener("click", function () {
+//   $("#staticBackdrop").modal("hide");
+//   console.log("click");
+// collapse nav footer
+$(window).resize(function () {
+  // chiều dài cửa sổ
+  var width = $(window).width();
+  var x = document.getElementsByClassName("heading");
+  var y = document.getElementsByClassName("heading_list");
+  if (width <= 992){
+    // gán giá trị cho data-toggle
+    // click ẩn/hiện collapse
+    for(var i = 1; i < x.length; i++){
+      x[i].setAttribute("data-toggle", "collapse");
+    }
+    // ẩn
+    $(".collapse").collapse('hide');
+  }else if(width > 992){
+    for(var i = 1; i < x.length; i++){
+      x[i].setAttribute("data-toggle", "");
+    }
+    // hiện
+    $(".collapse").collapse('show');
+  }
+  // if(width <= 767.9){
+  //   y[0].setAttribute("data-toggle", "collapse");
+  //   $(".collapse").collapse('hide');
+  // }else{
+  //   y[0].setAttribute("data-toggle", "");
+  //   $(".collapse").collapse('show');
+  // }.
+
+  if(width <= 767.9){
+    x[0].setAttribute("data-toggle", "collapse");
+    $(".collapse").collapse('hide');
+  }else{
+    x[0].setAttribute("data-toggle", "");
+    $(".collapse").collapse('show');
+  }
 });
