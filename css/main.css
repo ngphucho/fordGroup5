@@ -905,6 +905,11 @@ header .nav-right .item-link::after {
   text-decoration: none;
 }
 
+.footer .language .ford-btnBlue {
+  display: block;
+  max-width: 270px;
+}
+
 .footer .copyright {
   padding: 5px 0;
 }

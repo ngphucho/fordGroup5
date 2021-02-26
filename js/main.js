@@ -149,3 +149,8 @@ $(document).ready(function () {
     } // End if
   });
 });
+
+getELE("modalclick").addEventListener("click", function () {
+  $("#staticBackdrop").modal("hide");
+  console.log("click");
+});

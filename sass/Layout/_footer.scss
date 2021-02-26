@@ -1,3 +1,4 @@
+// $modal-fade-transform: scale(5);
 .footer {
   .container-fluid {
     padding: 0 35px;
@@ -33,6 +34,11 @@
       &:hover{
           text-decoration: none;
       }
+    }
+
+    .ford-btnBlue{
+      display: block;
+      max-width: 270px;
     }
   }
 
