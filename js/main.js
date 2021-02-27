@@ -155,21 +155,26 @@ $(window).resize(function () {
   // chiều dài cửa sổ
   var width = $(window).width();
   var x = document.getElementsByClassName("heading");
+  // console.log(x);
   var y = document.getElementsByClassName("heading_list");
-  if (width <= 992){
+  if (width < 992){
     // gán giá trị cho data-toggle
     // click ẩn/hiện collapse
-    for(var i = 1; i < x.length; i++){
+    for(var i = 2; i < x.length; i++){
       x[i].setAttribute("data-toggle", "collapse");
+      // console.log(x[i],i);
+      x[i].parentNode.querySelector(".collapse").setAttribute("data-parent","#accordionExample");
     }
     // ẩn
-    $(".footerNavbar .collapse").collapse('hide');
-  }else if(width > 992){
-    for(var i = 1; i < x.length; i++){
+    $(".footerNavbar .right .collapse").collapse('hide');
+  }else if(width >= 992){
+    for(var i = 2; i < x.length; i++){
       x[i].setAttribute("data-toggle", "");
+      x[i].parentNode.querySelector(".collapse").setAttribute("data-parent","");
     }
     // hiện
-    $(".footerNavbar .collapse").collapse('show');
+    // $(".footerNavbar .right .collapse").setAttribute("data-parent","");
+    $(".footerNavbar .right .collapse").collapse('show');
   }
   // if(width <= 767.9){
   //   y[0].setAttribute("data-toggle", "collapse");
@@ -180,10 +185,12 @@ $(window).resize(function () {
   // }.
 
   if(width <= 767.9){
-    x[0].setAttribute("data-toggle", "collapse");
-    $(".footerNavbar .collapse").collapse('hide');
+    x[1].setAttribute("data-toggle", "collapse");
+    x[1].parentNode.querySelector(".collapse").setAttribute("data-parent","#accordionExample");
+    $(".footerNavbar .left .collapse").collapse('hide');
   }else{
-    x[0].setAttribute("data-toggle", "");
-    $(".footerNavbar .collapse").collapse('show');
+    x[1].setAttribute("data-toggle", "");
+    x[1].parentNode.querySelector(".collapse").setAttribute("data-parent","");
+    $(".footerNavbar .left .collapse").collapse('show');
   }
 });
