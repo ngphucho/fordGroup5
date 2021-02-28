@@ -57,13 +57,30 @@
 
 @media (max-width: 767.9px) {
   .footerNavbar {
-    .heading:not(.first-heading) .text::after {
-      content: "\f078";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      right: 35px;
-      position: absolute;
-      transition: all 1s;
+    .heading:not(.first-heading) {
+      .text::after {
+        content: "\f078";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        right: 35px;
+        position: absolute;
+        transition: all 1s;
+      }
+    }
+
+    .heading {
+      position: relative;
+      padding-bottom: $pd-5;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background-color: $color-gray-3;
+        opacity: 0.5;
+        bottom: 0;
+      }
     }
   }
 }
@@ -75,29 +92,47 @@
         padding-right: 20%;
       }
 
-      .heading .text::after {
-        content: "\f078";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        right: 20%;
-        position: absolute;
-        transition: all 1s;
+      .heading {
+        .text::after {
+          content: "\f078";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          right: 20%;
+          position: absolute;
+          transition: all 1s;
+        }
+
+        position: relative;
+        padding-bottom: $pd-5;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          position: absolute;
+          height: 1px;
+          background-color: $color-gray-3;
+          opacity: 0.5;
+          bottom: 0;
+          // left: 50%;
+          // transform: translateX(-50%);
+        }
       }
     }
 
-    // li.list::after {
-    //     // background-color: #ff00ff;
-    // //   position: relative;
-    // //   &::before {
+    // .list {
+    //   position: relative;
+    //   &::before {
+    //     content: "";
     //     display: block;
-    //     width: 100%;
+    //     width: 60%;
     //     position: absolute;
-    //     height: 2px;
-    //     background-color: red;
-    //     // opacity: .5;
+    //     height: 1px;
+    //     background-color: $color-gray-3;
+    //     opacity: 0.5;
     //     bottom: 0;
-    //     left: 0;
-    // //   }
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //   }
     // }
   }
 }
