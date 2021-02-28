@@ -52,8 +52,8 @@
         .social {
           display: flex;
           justify-content: flex-end;
-          span{
-              margin-right: $margin-1 - 5;
+          span {
+            margin-right: $margin-1 - 5;
           }
           .fa-facebook-f {
             background-color: $color-facebook;
@@ -82,6 +82,79 @@
       .social {
         display: flex;
         justify-content: flex-end;
+      }
+    }
+  }
+}
+@include responsive("md-large") {
+  .contact {
+    .contact_left {
+      .row {
+        display: block;
+        .contact_item {
+          max-width: 100%;
+          padding: $pd-5 $pd-5;
+        }
+        .right_it {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@include responsive("large") {
+  .contact {
+    padding: $pd-6 0;
+    .contact_left {
+      padding-left: $pd-11;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      .row {
+        display: flex;
+        .contact_item {
+          max-width: 33.333%;
+          padding: 0;
+        }
+        .left_it {
+          max-width: 100%;
+        }
+        .right_it {
+          display: none;
+        }
+      }
+    }
+    .contact_right {
+      width: 50%;
+    }
+  }
+}
+@include responsive("medium") {
+  .contact {
+    .contact_left{  
+      .left_it {
+        border-bottom: 1px solid $color-gray-3;
+        padding-bottom: $pd-6!important;
+      }
+      .contact_item {
+        padding-bottom: $pd-11;
+        .text{        
+            @include styleText($color-blue-5, $fs-4!important, $fw-4);
+        }
+        .icon {
+          i {
+            font-size: $fs-17!important;
+          }
+        }
+      }
+    }
+    .contact_right{
+      padding-top:$pd-5;
+      .social_text{
+        text-align: left!important;
+      }
+      .social{
+        justify-content: flex-start!important;
       }
     }
   }
