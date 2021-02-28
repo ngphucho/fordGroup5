@@ -53,6 +53,17 @@
         p {
             padding: $pd-4;
         }
+        .video{
+            .play-icon{
+                top: 40%;
+                left: 43%;
+                i{
+                    width: 100px;
+                    height: 100px;
+                    line-height: 104px;
+                }
+            }
+        }
     }
 }
 @include responsive("medium") {
@@ -64,6 +75,17 @@
         p {
             font-size: $fs-3;
             padding: $pd-4 0;
+        }
+        .video{
+            .play-icon{
+                top: 38%;
+                left: 42%;
+                i{
+                    width: 90px;
+                    height: 90px;
+                    line-height: 94px;
+                }
+            }
         }
     }
 }
