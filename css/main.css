@@ -1701,6 +1701,9 @@ header .nav-right .item-link::after {
 }
 
 @media (max-width: 767.9px) {
+  .footerNavbar {
+    padding: 15px 0;
+  }
   .footerNavbar .heading:not(.first-heading) .text::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";

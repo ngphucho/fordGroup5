@@ -57,6 +57,7 @@
 
 @media (max-width: 767.9px) {
   .footerNavbar {
+    padding: $pd-5 0;
     .heading:not(.first-heading) {
       .text::after {
         content: "\f078";
