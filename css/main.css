@@ -1704,6 +1704,9 @@ header .nav-right .item-link::after {
   .footerNavbar {
     padding: 15px 0;
   }
+  .footerNavbar .shop {
+    padding-top: 15px;
+  }
   .footerNavbar .heading:not(.first-heading) .text::after {
     content: "\f078";
     font-family: "Font Awesome 5 Free";
