@@ -864,7 +864,7 @@ header .nav-right .item-link::after {
 }
 
 .footer {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .footer .container-fluid {
