@@ -9,9 +9,25 @@
         width: 95%;
         margin: 0 auto;
         .search_left{
-            @include styleText($color-white, $fs-7, $fw-0);
+            @include styleText($color-white, $fs-6, $fw-4);
+            font-family: 'Roboto', sans-serif;
             span:last-child{
                 padding:0 $pd-4; 
+            }
+            ::placeholder{
+                @include styleText($color-white, $fs-7, $fw-4);
+            }
+            .search_input{
+                background-color:  $color-gray-1;
+                border: none;
+                &:focus{
+                    border: none;
+                    box-shadow: none; 
+                    outline:none;
+                }
+            }
+            .search_icon{
+                margin-right: $margin-2;
             }
     
         }

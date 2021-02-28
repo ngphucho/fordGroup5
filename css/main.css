@@ -756,7 +756,7 @@ header .nav-right .item-link::after {
 }
 
 .footer {
-  margin-bottom: 20px;
+  padding: 30px 0;
 }
 
 .footer .container-fluid {
@@ -1777,12 +1777,34 @@ header .nav-right .item-link::after {
 
 .search .search_content .search_left {
   color: #fff;
-  font-size: 24px;
-  font-weight: normal;
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
 }
 
 .search .search_content .search_left span:last-child {
   padding: 0 10px;
+}
+
+.search .search_content .search_left ::placeholder {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.search .search_content .search_left .search_input {
+  background-color: #333;
+  border: none;
+}
+
+.search .search_content .search_left .search_input:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.search .search_content .search_left .search_icon {
+  margin-right: 15px;
 }
 
 .search .search_content .search_right {
