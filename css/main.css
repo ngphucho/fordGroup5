@@ -1886,12 +1886,30 @@ header .nav-right .item-link::after {
     -webkit-transition: all 1s;
     transition: all 1s;
   }
+  .footerNavbar .heading {
+    position: relative;
+    padding-bottom: 15px;
+  }
+  .footerNavbar .heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: #a7a7a7;
+    opacity: 0.5;
+    bottom: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .footerNavbar .right .list {
     padding-left: 20%;
     padding-right: 20%;
+  }
+  .footerNavbar .right .heading {
+    position: relative;
+    padding-bottom: 15px;
   }
   .footerNavbar .right .heading .text::after {
     content: "\f078";
@@ -1901,6 +1919,16 @@ header .nav-right .item-link::after {
     position: absolute;
     -webkit-transition: all 1s;
     transition: all 1s;
+  }
+  .footerNavbar .right .heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: #a7a7a7;
+    opacity: 0.5;
+    bottom: 0;
   }
 }
 

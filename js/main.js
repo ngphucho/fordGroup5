@@ -168,13 +168,13 @@ $(window).resize(function () {
     // ẩn
     $(".footerNavbar .right .collapse").collapse('hide');
   }else if(width >= 992){
-    for(var i = 2; i < x.length; i++){
+    for(var i = 1; i < x.length; i++){
       x[i].setAttribute("data-toggle", "");
       x[i].parentNode.querySelector(".collapse").setAttribute("data-parent","");
     }
     // hiện
     // $(".footerNavbar .right .collapse").setAttribute("data-parent","");
-    $(".footerNavbar .right .collapse").collapse('show');
+    $(".footerNavbar .collapse").collapse('show');
   }
   // if(width <= 767.9){
   //   y[0].setAttribute("data-toggle", "collapse");
