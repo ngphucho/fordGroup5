@@ -69,6 +69,9 @@ header {
     text-decoration: none;
   }
 }
+.logo {
+  padding-left: 0;
+}
 .logo img {
   width: 125px;
   padding: 0 $pd-8 $pd-3 0;
@@ -422,12 +425,12 @@ header {
       top: 0;
       z-index: 15;
       background-color: $color-white;
-      
+
       padding: 20px 35px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      
+
       box-shadow: 0 8px 4px -4px #00000033;
       height: 70px;
 
@@ -452,7 +455,6 @@ header {
       }
 
       &.expanded {
-
         .nav-right,
         .nav-left {
           display: block;
@@ -532,7 +534,7 @@ header {
       text-align: center;
       justify-content: center;
       align-items: center;
-      
+
       a {
         text-decoration: none;
       }
